@@ -1,0 +1,897 @@
+/* ==========================================
+   SHUBH LABH DISTRIBUTIONS
+   PROFESSIONAL CORPORATE WEBSITE
+========================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+line-height:1.7;
+
+color:#333;
+
+background:#ffffff;
+
+}
+
+.container{
+
+width:90%;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+/* =====================
+HEADER
+===================== */
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+background:#ffffff;
+
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+
+z-index:999;
+
+}
+
+nav{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 0;
+
+}
+
+.logo h2{
+
+color:#0056b3;
+
+font-size:30px;
+
+font-weight:700;
+
+}
+
+.logo p{
+
+font-size:13px;
+
+letter-spacing:3px;
+
+color:#777;
+
+}
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+}
+
+nav ul li{
+
+margin-left:35px;
+
+}
+
+nav ul li a{
+
+text-decoration:none;
+
+color:#222;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+color:#0056b3;
+
+}
+
+.btn{
+
+background:#0056b3;
+
+color:#fff;
+
+padding:12px 28px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:#003d80;
+
+}
+
+/* =====================
+HERO
+===================== */
+
+.hero{
+
+height:100vh;
+
+background:linear-gradient(rgba(0,43,91,.65),
+rgba(0,43,91,.65)),
+url("images/hero.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+align-items:center;
+
+text-align:center;
+
+color:white;
+
+}
+
+.hero-content{
+
+max-width:900px;
+
+}
+
+.hero h1{
+
+font-size:58px;
+
+font-weight:700;
+
+margin-bottom:25px;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+}
+
+.primary-btn{
+
+background:#f4b400;
+
+color:#000;
+
+padding:15px 35px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.primary-btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+.secondary-btn{
+
+background:white;
+
+color:#0056b3;
+
+padding:15px 35px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.secondary-btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+/* =====================
+SECTION TITLE
+===================== */
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.section-title h2{
+
+font-size:40px;
+
+color:#0056b3;
+
+margin-bottom:20px;
+
+}
+
+.section-title p{
+
+color:#666;
+
+max-width:750px;
+
+margin:auto;
+
+font-size:18px;
+
+}
+/* =====================================
+ABOUT SECTION
+===================================== */
+
+.about{
+
+padding:100px 0;
+
+background:#ffffff;
+
+}
+
+.about-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:35px;
+
+}
+
+.about-card{
+
+background:#fff;
+
+padding:35px;
+
+border-radius:15px;
+
+text-align:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.about-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.about-card i{
+
+font-size:45px;
+
+color:#0056b3;
+
+margin-bottom:20px;
+
+}
+
+.about-card h3{
+
+margin-bottom:15px;
+
+font-size:24px;
+
+}
+
+/* =====================================
+WHY CHOOSE US
+===================================== */
+
+.features{
+
+padding:100px 0;
+
+background:#f8fbff;
+
+}
+
+.feature-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+.feature-box{
+
+background:#fff;
+
+padding:40px;
+
+text-align:center;
+
+border-radius:15px;
+
+transition:.4s;
+
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.feature-box:hover{
+
+background:#0056b3;
+
+color:white;
+
+transform:translateY(-10px);
+
+}
+
+.feature-box:hover i{
+
+color:#ffd54f;
+
+}
+
+.feature-box i{
+
+font-size:45px;
+
+margin-bottom:20px;
+
+color:#0056b3;
+
+transition:.3s;
+
+}
+
+.feature-box h3{
+
+margin-bottom:15px;
+
+font-size:24px;
+
+}
+
+/* =====================================
+STATS
+===================================== */
+
+.stats{
+
+padding:90px 0;
+
+background:#0056b3;
+
+color:white;
+
+}
+
+.stats .container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
+gap:30px;
+
+text-align:center;
+
+}
+
+.stat h2{
+
+font-size:52px;
+
+margin-bottom:10px;
+
+color:#ffd54f;
+
+}
+
+.stat p{
+
+font-size:18px;
+
+}
+
+/* =====================================
+PRODUCTS
+===================================== */
+
+.products{
+
+padding:100px 0;
+
+background:white;
+
+}
+
+.product-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:35px;
+
+}
+
+.product-card{
+
+background:white;
+
+border-radius:15px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.product-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.product-card img{
+
+width:100%;
+
+height:230px;
+
+object-fit:cover;
+
+}
+
+.product-card h3{
+
+padding:20px 20px 10px;
+
+font-size:24px;
+
+}
+
+.product-card p{
+
+padding:0 20px 20px;
+
+color:#666;
+
+}
+
+.btn-small{
+
+display:inline-block;
+
+margin:0 20px 25px;
+
+padding:12px 25px;
+
+background:#0056b3;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:30px;
+
+transition:.3s;
+
+}
+
+.btn-small:hover{
+
+background:#003f85;
+
+}
+/* =====================================
+CONTACT SECTION
+===================================== */
+
+.contact-home{
+
+padding:100px 0;
+
+background:#f8fbff;
+
+}
+
+.contact-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:50px;
+
+}
+
+.contact-card{
+
+background:white;
+
+padding:40px;
+
+text-align:center;
+
+border-radius:15px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.contact-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.contact-card i{
+
+font-size:45px;
+
+color:#0056b3;
+
+margin-bottom:20px;
+
+}
+
+.contact-card h3{
+
+margin-bottom:15px;
+
+font-size:24px;
+
+}
+
+/* =====================================
+FOOTER
+===================================== */
+
+footer{
+
+background:#002855;
+
+color:white;
+
+padding:70px 0 20px;
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:40px;
+
+}
+
+.footer-grid h3{
+
+margin-bottom:20px;
+
+font-size:24px;
+
+color:#ffd54f;
+
+}
+
+.footer-grid p{
+
+line-height:1.8;
+
+}
+
+.footer-grid ul{
+
+list-style:none;
+
+}
+
+.footer-grid ul li{
+
+margin-bottom:10px;
+
+}
+
+.footer-grid ul li a{
+
+color:white;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.footer-grid ul li a:hover{
+
+color:#ffd54f;
+
+}
+
+.social-icons{
+
+display:flex;
+
+gap:15px;
+
+margin-top:15px;
+
+}
+
+.social-icons a{
+
+height:45px;
+
+width:45px;
+
+background:white;
+
+color:#0056b3;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:50%;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.social-icons a:hover{
+
+background:#ffd54f;
+
+color:#000;
+
+transform:scale(1.1);
+
+}
+
+footer hr{
+
+margin:40px 0 20px;
+
+border:none;
+
+height:1px;
+
+background:rgba(255,255,255,.2);
+
+}
+
+.copyright{
+
+text-align:center;
+
+font-size:14px;
+
+color:#ddd;
+
+}
+
+/* =====================================
+ANIMATIONS
+===================================== */
+
+.about-card,
+.feature-box,
+.product-card,
+.contact-card{
+
+animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* =====================================
+RESPONSIVE
+===================================== */
+
+@media(max-width:991px){
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.section-title h2{
+
+font-size:34px;
+
+}
+
+nav{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+padding:100px 20px;
+
+height:auto;
+
+}
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.section-title h2{
+
+font-size:30px;
+
+}
+
+.logo{
+
+text-align:center;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.hero h1{
+
+font-size:28px;
+
+}
+
+.btn,
+.primary-btn,
+.secondary-btn{
+
+width:100%;
+
+text-align:center;
+
+}
+
+.about,
+.features,
+.products,
+.contact-home{
+
+padding:70px 0;
+
+}
+
+}
+
