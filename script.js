@@ -1,103 +1,239 @@
-/* ==========================================
-   SHUBH LABH DISTRIBUTIONS
-   script.js
-========================================== */
+/* =========================================
+   TABLETS (991px and below)
+========================================= */
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        const targetId = this.getAttribute('href');
+@media (max-width:991px){
 
-        if (targetId.startsWith('#')) {
-            e.preventDefault();
-
-            const target = document.querySelector(targetId);
-
-            if (target) {
-                window.scrollTo({
-                    top: target.offsetTop - 70,
-                    behavior: 'smooth'
-                });
-            }
-        }
-    });
-});
-
-// Header shadow on scroll
-window.addEventListener('scroll', function () {
-    const header = document.querySelector('header');
-
-    if (!header) return;
-
-    if (window.scrollY > 30) {
-        header.style.boxShadow = "0 4px 20px rgba(0,0,0,0.15)";
-    } else {
-        header.style.boxShadow = "0 2px 10px rgba(0,0,0,0.08)";
-    }
-});
-
-// Fade-in animation
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-        }
-    });
-}, {
-    threshold: 0.15
-});
-
-document.querySelectorAll('.about-card, .feature-box, .product-card, .contact-card').forEach(card => {
-    card.style.opacity = "0";
-    card.style.transform = "translateY(40px)";
-    card.style.transition = "all 0.8s ease";
-
-    observer.observe(card);
-});
-
-// Scroll to top button
-const topButton = document.createElement("button");
-
-topButton.innerHTML = "↑";
-topButton.id = "topBtn";
-
-document.body.appendChild(topButton);
-
-topButton.style.position = "fixed";
-topButton.style.bottom = "25px";
-topButton.style.right = "25px";
-topButton.style.width = "50px";
-topButton.style.height = "50px";
-topButton.style.border = "none";
-topButton.style.borderRadius = "50%";
-topButton.style.background = "#0056b3";
-topButton.style.color = "#fff";
-topButton.style.fontSize = "22px";
-topButton.style.cursor = "pointer";
-topButton.style.display = "none";
-topButton.style.zIndex = "999";
-
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        topButton.style.display = "block";
-    } else {
-        topButton.style.display = "none";
-    }
-});
-
-topButton.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
-
-// Footer year
-const yearElement = document.getElementById("year");
-
-if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
+.container{
+    width:92%;
 }
 
-console.log("Shubh Labh Distributions Website Loaded Successfully");
+.header .container{
+    height:75px;
+}
+
+.logo img{
+    height:50px;
+}
+
+.navbar{
+    position:absolute;
+    top:75px;
+    left:0;
+    width:100%;
+    background:#fff;
+    display:none;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.navbar.active{
+    display:block;
+}
+
+.navbar ul{
+    flex-direction:column;
+    padding:20px;
+    gap:15px;
+}
+
+.menu-toggle{
+    display:block;
+}
+
+.header-btn{
+    display:none;
+}
+
+.hero .container,
+.about-grid,
+.features .container,
+.contact-wrapper,
+.mission-vision .container{
+    grid-template-columns:1fr;
+    display:grid;
+}
+
+.hero{
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:42px;
+}
+
+.hero-buttons{
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.counter-section .container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.process-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.service-grid,
+.product-grid,
+.why-grid,
+.value-grid,
+.footer-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.feature-right{
+    margin-top:30px;
+}
+
+.contact-info{
+    margin-bottom:30px;
+}
+
+.newsletter form{
+    flex-direction:column;
+    align-items:center;
+}
+
+.newsletter input{
+    width:100%;
+    max-width:500px;
+}
+
+}
+
+
+/* =========================================
+   MOBILE (768px and below)
+========================================= */
+
+@media (max-width:768px){
+
+section{
+    padding:70px 0;
+}
+
+.section-title h2{
+    font-size:30px;
+}
+
+.section-title p{
+    font-size:16px;
+}
+
+.hero{
+    padding-top:120px;
+}
+
+.hero-content h1{
+    font-size:34px;
+}
+
+.hero-content p{
+    font-size:16px;
+}
+
+.hero-buttons{
+    flex-direction:column;
+}
+
+.btn,
+.btn-outline{
+    width:100%;
+    text-align:center;
+}
+
+.counter-section .container{
+    grid-template-columns:1fr;
+}
+
+.process-grid{
+    grid-template-columns:1fr;
+}
+
+.service-grid,
+.product-grid,
+.why-grid,
+.value-grid,
+.footer-grid{
+    grid-template-columns:1fr;
+}
+
+.testimonial-slider{
+    grid-template-columns:1fr;
+}
+
+.contact-form,
+.contact-info{
+    padding:30px;
+}
+
+.newsletter h2{
+    font-size:30px;
+}
+
+.cta h2{
+    font-size:30px;
+}
+
+.feature-left h2{
+    font-size:30px;
+}
+
+.about-content h3{
+    font-size:28px;
+}
+
+.mission-card,
+.vision-card{
+    padding:30px;
+}
+
+}
+
+
+/* =========================================
+   SMALL MOBILE (480px and below)
+========================================= */
+
+@media (max-width:480px){
+
+.hero-content h1{
+    font-size:28px;
+}
+
+.hero-content h4{
+    font-size:18px;
+}
+
+.section-title h2{
+    font-size:26px;
+}
+
+.counter-box h2{
+    font-size:34px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:12px;
+}
+
+.btn,
+.btn-outline,
+.login-btn{
+    padding:14px 20px;
+}
+
+.scroll-top{
+    width:45px;
+    height:45px;
+    right:15px;
+    bottom:15px;
+}
+
+.logo img{
+    height:45px;
+}
+
+}
