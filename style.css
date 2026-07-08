@@ -1,12 +1,13 @@
-/* ===============================
-   SHUBH LABH DISTRIBUTIONS
-   MAIN STYLESHEET
-================================= */
+/*==========================
+SHUBH LABH DISTRIBUTIONS
+Premium Theme
+==========================*/
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
 html{
@@ -14,734 +15,168 @@ html{
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    color:#222;
     background:#ffffff;
-    line-height:1.7;
-    overflow-x:hidden;
+    color:#222;
 }
 
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
+/* NAVBAR */
 
-img{
-    max-width:100%;
-    display:block;
-}
-
-a{
-    text-decoration:none;
-}
-
-ul{
-    list-style:none;
-}
-
-section{
-    padding:90px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.section-title h2{
-    font-size:40px;
-    color:#0B2341;
-    margin-bottom:15px;
-    font-weight:700;
-}
-
-.section-title p{
-    color:#666;
-    font-size:18px;
-}
-
-/* ================= HEADER ================= */
-
-.header{
+header{
     position:fixed;
-    width:100%;
     top:0;
     left:0;
-    background:#fff;
+    width:100%;
     z-index:999;
-    box-shadow:0 3px 12px rgba(0,0,0,.08);
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(10px);
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
 }
 
-.header .container{
+.navbar{
+    max-width:1300px;
+    margin:auto;
+    padding:15px 30px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    height:85px;
 }
 
 .logo img{
-    height:60px;
+    height:70px;
 }
 
-.navbar ul{
+.nav-links{
     display:flex;
-    gap:35px;
-}
-
-.navbar ul li a{
-    color:#0B2341;
-    font-weight:600;
-    transition:.3s;
-}
-
-.navbar ul li a:hover{
-    color:#d4a017;
-}
-
-.login-btn{
-    background:#d4a017;
-    color:#fff;
-    padding:12px 24px;
-    border-radius:30px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.login-btn:hover{
-    background:#0B2341;
-}
-
-.menu-toggle{
-    display:none;
-    font-size:28px;
-    cursor:pointer;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    padding-top:150px;
-    background:linear-gradient(135deg,#0B2341,#183C66);
-    color:#fff;
-}
-
-.hero .container{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:60px;
-}
-
-.hero-content{
-    flex:1;
-}
-
-.hero-content h4{
-    color:#FFD54F;
-    font-size:20px;
-    margin-bottom:15px;
-}
-
-.hero-content h1{
-    font-size:58px;
-    line-height:1.2;
-    margin-bottom:25px;
-}
-
-.hero-content p{
-    font-size:18px;
-    margin-bottom:35px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:20px;
-}
-
-.btn{
-    background:#d4a017;
-    color:#fff;
-    padding:15px 35px;
-    border-radius:30px;
-    display:inline-block;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn:hover{
-    background:#fff;
-    color:#0B2341;
-}
-
-.btn-outline{
-    border:2px solid #fff;
-    color:#fff;
-    padding:15px 35px;
-    border-radius:30px;
-    transition:.3s;
-}
-
-.btn-outline:hover{
-    background:#fff;
-    color:#0B2341;
-}
-
-.hero-image{
-    flex:1;
-}
-
-/* ================= ABOUT ================= */
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
-
-.about-image img{
-    border-radius:20px;
-}
-
-.about-content h3{
-    font-size:34px;
-    color:#0B2341;
-    margin-bottom:20px;
-}
-
-.about-content p{
-    margin-bottom:20px;
-    color:#666;
-}
-/* ===============================
-   SHUBH LABH DISTRIBUTIONS
-   MAIN STYLESHEET
-================================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Poppins',sans-serif;
-    color:#222;
-    background:#ffffff;
-    line-height:1.7;
-    overflow-x:hidden;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-a{
-    text-decoration:none;
-}
-
-ul{
     list-style:none;
+    gap:28px;
 }
 
-section{
-    padding:90px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.section-title h2{
-    font-size:40px;
-    color:#0B2341;
-    margin-bottom:15px;
-    font-weight:700;
-}
-
-.section-title p{
-    color:#666;
-    font-size:18px;
-}
-
-/* ================= HEADER ================= */
-
-.header{
-    position:fixed;
-    width:100%;
-    top:0;
-    left:0;
-    background:#fff;
-    z-index:999;
-    box-shadow:0 3px 12px rgba(0,0,0,.08);
-}
-
-.header .container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    height:85px;
-}
-
-.logo img{
-    height:60px;
-}
-
-.navbar ul{
-    display:flex;
-    gap:35px;
-}
-
-.navbar ul li a{
-    color:#0B2341;
+.nav-links a{
+    text-decoration:none;
+    color:#0c2345;
     font-weight:600;
     transition:.3s;
 }
 
-.navbar ul li a:hover{
-    color:#d4a017;
+.nav-links a:hover,
+.nav-links .active{
+    color:#d6a441;
 }
 
 .login-btn{
-    background:#d4a017;
+    text-decoration:none;
+    background:#d6a441;
     color:#fff;
     padding:12px 24px;
-    border-radius:30px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.login-btn:hover{
-    background:#0B2341;
-}
-
-.menu-toggle{
-    display:none;
-    font-size:28px;
-    cursor:pointer;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    padding-top:150px;
-    background:linear-gradient(135deg,#0B2341,#183C66);
-    color:#fff;
-}
-
-.hero .container{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:60px;
-}
-
-.hero-content{
-    flex:1;
-}
-
-.hero-content h4{
-    color:#FFD54F;
-    font-size:20px;
-    margin-bottom:15px;
-}
-
-.hero-content h1{
-    font-size:58px;
-    line-height:1.2;
-    margin-bottom:25px;
-}
-
-.hero-content p{
-    font-size:18px;
-    margin-bottom:35px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:20px;
-}
-
-.btn{
-    background:#d4a017;
-    color:#fff;
-    padding:15px 35px;
-    border-radius:30px;
-    display:inline-block;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn:hover{
-    background:#fff;
-    color:#0B2341;
-}
-
-.btn-outline{
-    border:2px solid #fff;
-    color:#fff;
-    padding:15px 35px;
-    border-radius:30px;
-    transition:.3s;
-}
-
-.btn-outline:hover{
-    background:#fff;
-    color:#0B2341;
-}
-
-.hero-image{
-    flex:1;
-}
-
-/* ================= ABOUT ================= */
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
-
-.about-image img{
-    border-radius:20px;
-}
-
-.about-content h3{
-    font-size:34px;
-    color:#0B2341;
-    margin-bottom:20px;
-}
-
-.about-content p{
-    margin-bottom:20px;
-    color:#666;
-}
-/*=========================================
-TESTIMONIALS
-=========================================*/
-
-.testimonials{
-    background:#ffffff;
-}
-
-.testimonial-slider{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
-}
-
-.testimonial-card{
-    background:#f8f9fb;
-    padding:35px;
-    border-radius:18px;
-    text-align:center;
-    transition:.35s;
-    box-shadow:0 10px 25px rgba(0,0,0,.06);
-}
-
-.testimonial-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 18px 40px rgba(0,0,0,.12);
-}
-
-.testimonial-card img{
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    margin:auto;
-    object-fit:cover;
-    margin-bottom:20px;
-}
-
-.testimonial-card h3{
-    color:#0B2341;
-    margin-bottom:8px;
-}
-
-.testimonial-card span{
-    color:#d4a017;
-    display:block;
-    margin-bottom:18px;
-    font-weight:600;
-}
-
-.testimonial-card p{
-    color:#666;
-}
-
-
-/*=========================================
-CONTACT
-=========================================*/
-
-.contact{
-    background:#f7f9fc;
-}
-
-.contact-wrapper{
-    display:grid;
-    grid-template-columns:1fr 1.3fr;
-    gap:50px;
-}
-
-.contact-info{
-    background:#0B2341;
-    color:#fff;
-    padding:40px;
-    border-radius:20px;
-}
-
-.contact-info h3{
-    margin-bottom:25px;
-    font-size:28px;
-}
-
-.contact-info p{
-    margin-bottom:18px;
-}
-
-.contact-info i{
-    color:#FFD54F;
-    margin-right:10px;
-}
-
-.contact-form{
-    background:#fff;
-    padding:40px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.contact-form input,
-.contact-form textarea{
-    width:100%;
-    padding:15px;
-    margin-bottom:18px;
-    border:1px solid #ddd;
-    border-radius:8px;
-    outline:none;
-    font-size:15px;
-    transition:.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus{
-    border-color:#d4a017;
-}
-
-
-/*=========================================
-NEWSLETTER
-=========================================*/
-
-.newsletter{
-    background:#0B2341;
-    color:#fff;
-    text-align:center;
-}
-
-.newsletter h2{
-    font-size:40px;
-    margin-bottom:15px;
-}
-
-.newsletter p{
-    margin-bottom:30px;
-}
-
-.newsletter form{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-}
-
-.newsletter input{
-    width:400px;
-    max-width:100%;
-    padding:15px;
-    border:none;
     border-radius:40px;
-}
-
-
-/*=========================================
-FOOTER
-=========================================*/
-
-footer{
-    background:#08192d;
-    color:#ddd;
-    padding:70px 0 30px;
-}
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:40px;
-}
-
-.footer-grid h3{
-    color:#fff;
-    margin-bottom:20px;
-}
-
-.footer-grid p,
-.footer-grid li{
-    color:#bbb;
-    margin-bottom:12px;
-}
-
-.footer-grid a{
-    color:#bbb;
+    font-weight:600;
     transition:.3s;
 }
 
-.footer-grid a:hover{
-    color:#FFD54F;
+.login-btn:hover{
+    background:#0c2345;
 }
 
-.social{
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:url("hero.jpg") center center/cover no-repeat;
+    position:relative;
     display:flex;
+    align-items:center;
+    padding:0 8%;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(8,25,52,.72);
+}
+
+.hero-content{
+    position:relative;
+    max-width:650px;
+    color:#fff;
+}
+
+.hero-content h1{
+    font-size:60px;
+    line-height:1.2;
+    margin-bottom:25px;
+    font-weight:700;
+}
+
+.hero-content span{
+    color:#d6a441;
+}
+
+.hero-content p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:18px;
+}
+
+.primary-btn,
+.secondary-btn{
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.primary-btn{
+    background:#d6a441;
+    color:white;
+}
+
+.primary-btn:hover{
+    background:white;
+    color:#0c2345;
+}
+
+.secondary-btn{
+    border:2px solid white;
+    color:white;
+}
+
+.secondary-btn:hover{
+    background:white;
+    color:#0c2345;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.navbar{
+    flex-direction:column;
     gap:15px;
-    margin-top:20px;
 }
 
-.social a{
-    width:42px;
-    height:42px;
-    background:#d4a017;
-    color:#fff;
-    display:flex;
+.nav-links{
+    flex-wrap:wrap;
     justify-content:center;
-    align-items:center;
-    border-radius:50%;
-    transition:.3s;
+    gap:15px;
 }
 
-.social a:hover{
-    background:#fff;
-    color:#0B2341;
-}
-
-footer hr{
-    border:none;
-    border-top:1px solid rgba(255,255,255,.12);
-    margin:40px 0 25px;
-}
-
-.copyright{
+.hero{
     text-align:center;
-    color:#999;
+    padding:120px 25px;
 }
 
-
-/*=========================================
-BACK TO TOP
-=========================================*/
-
-.scroll-top{
-    position:fixed;
-    right:25px;
-    bottom:25px;
-    width:50px;
-    height:50px;
-    background:#d4a017;
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:50%;
-    font-size:20px;
-    transition:.3s;
-    z-index:999;
+.hero-content h1{
+    font-size:38px;
 }
 
-.scroll-top:hover{
-    background:#0B2341;
+.hero-buttons{
+    flex-direction:column;
 }
 
-
-/*=========================================
-COMMON ANIMATIONS
-=========================================*/
-
-.btn,
-.login-btn,
-.service-card,
-.product-card,
-.value-card,
-.why-card,
-.counter-box,
-.process-card,
-.testimonial-card{
-    transition:all .35s ease;
-}
-
-.fade-up{
-    opacity:0;
-    transform:translateY(40px);
-}
-
-.fade-up.show{
-    opacity:1;
-    transform:translateY(0);
-    transition:.8s ease;
-}
-
-
-/*=========================================
-UTILITY CLASSES
-=========================================*/
-
-.text-center{
-    text-align:center;
-}
-
-.mt-20{
-    margin-top:20px;
-}
-
-.mt-40{
-    margin-top:40px;
-}
-
-.mb-20{
-    margin-bottom:20px;
-}
-
-.mb-40{
-    margin-bottom:40px;
-}
-
-.rounded{
-    border-radius:20px;
-}
-
-.shadow{
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-}
-
-.bg-primary{
-    background:#0B2341;
-    color:#fff;
-}
-
-.bg-gold{
-    background:#d4a017;
-    color:#fff;
 }
