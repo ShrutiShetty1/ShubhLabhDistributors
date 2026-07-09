@@ -932,13 +932,14 @@ margin:20px 0;
 }
 
 .hero{
-text-align:center;
-padding:120px 0 80px;
-height:auto;
+    text-align:center;
+    padding:120px 0 80px;
+    min-height:calc(100vh - 90px);
 }
 
 .hero-content{
-max-width:100%;
+    max-width:100%;
+    width:100%;
 }
 
 .hero h1{
