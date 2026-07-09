@@ -1027,7 +1027,7 @@ padding:14px 24px;
 SCROLL ANIMATION
 =========================*/
 
-section{
+/*section{
     opacity:0;
     transform:translateY(60px);
     transition:all .8s ease;
@@ -1036,7 +1036,7 @@ section{
 section.show{
     opacity:1;
     transform:translateY(0);
-}
+}*/
 
 /*=========================
 ACTIVE MENU
