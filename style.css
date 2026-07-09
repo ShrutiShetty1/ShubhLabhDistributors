@@ -45,7 +45,7 @@ margin:auto;
 HEADER
 ========================== */
 
-header{
+/*header{
 position:fixed;
 top:0;
 left:0;
@@ -57,6 +57,20 @@ transition:.4s;
 header.scrolled{
 background:#ffffff;
 box-shadow:0 10px 30px rgba(0,0,0,.08);
+}*/
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:transparent;
+    transition:0.35s ease;
+}
+
+header.scrolled{
+    background:#ffffff;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 .navbar{
@@ -125,7 +139,7 @@ gap:35px;
 
 }
 
-.nav-links a{
+/*.nav-links a{
 
 color:#ffffff;
 
@@ -145,6 +159,22 @@ color:#0B2D5C;
 
 color:#D4AF37;
 
+}*/
+.nav-links a{
+    color:#ffffff;
+    transition:.3s;
+}
+
+header.scrolled .nav-links a{
+    color:#0B2D5C;
+}
+
+.nav-links a:hover{
+    color:#D4AF37;
+}
+
+header.scrolled .nav-links a.active{
+    color:#D4AF37;
 }
 
 .login-btn{
