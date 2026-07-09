@@ -482,7 +482,33 @@ FEATURES
 /*=========================================
 HOW WE WORK
 =========================================*/
+.workflow-note{
+    margin-top:60px;
+    text-align:center;
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
 
+.workflow-note h3{
+    color:#0B2D5C;
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+.workflow-note p{
+    color:#555;
+    line-height:1.9;
+    font-size:18px;
+}
+
+.flow-description{
+    margin-top:20px;
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
+}
 .how-we-work{
     background:#f7f9fc;
     padding:100px 0;
