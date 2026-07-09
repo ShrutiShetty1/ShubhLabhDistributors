@@ -1,239 +1,152 @@
-/* =========================================
-   TABLETS (991px and below)
-========================================= */
+/*==============================
+SHUBH LABH DISTRIBUTIONS
+Premium Theme
+==============================*/
 
-@media (max-width:991px){
+/* Sticky Header */
 
-.container{
-    width:92%;
-}
+window.addEventListener("scroll", function () {
 
-.header .container{
-    height:75px;
-}
+    const header = document.querySelector("header");
 
-.logo img{
-    height:50px;
-}
+    if (window.scrollY > 80) {
 
-.navbar{
-    position:absolute;
-    top:75px;
-    left:0;
-    width:100%;
-    background:#fff;
-    display:none;
-    box-shadow:0 5px 20px rgba(0,0,0,.1);
-}
+        header.style.background = "#ffffff";
+        header.style.boxShadow = "0 8px 25px rgba(0,0,0,.08)";
 
-.navbar.active{
-    display:block;
-}
+        document.querySelectorAll(".menu a").forEach(link => {
+            link.style.color = "#0B2D5C";
+        });
 
-.navbar ul{
-    flex-direction:column;
-    padding:20px;
-    gap:15px;
-}
+        document.querySelector(".logo-text h2").style.color = "#0B2D5C";
 
-.menu-toggle{
-    display:block;
-}
+    } else {
 
-.header-btn{
-    display:none;
-}
+        header.style.background = "transparent";
+        header.style.boxShadow = "none";
 
-.hero .container,
-.about-grid,
-.features .container,
-.contact-wrapper,
-.mission-vision .container{
-    grid-template-columns:1fr;
-    display:grid;
-}
+        document.querySelectorAll(".menu a").forEach(link => {
+            link.style.color = "#ffffff";
+        });
 
-.hero{
-    text-align:center;
-}
+        document.querySelector(".logo-text h2").style.color = "#ffffff";
 
-.hero-content h1{
-    font-size:42px;
-}
+    }
 
-.hero-buttons{
-    justify-content:center;
-    flex-wrap:wrap;
-}
+});
 
-.counter-section .container{
-    grid-template-columns:repeat(2,1fr);
-}
+/* Smooth Scroll */
 
-.process-grid{
-    grid-template-columns:repeat(2,1fr);
-}
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-.service-grid,
-.product-grid,
-.why-grid,
-.value-grid,
-.footer-grid{
-    grid-template-columns:repeat(2,1fr);
-}
+    anchor.addEventListener("click", function(e){
 
-.feature-right{
-    margin-top:30px;
-}
+        e.preventDefault();
 
-.contact-info{
-    margin-bottom:30px;
-}
+        const target=document.querySelector(this.getAttribute("href"));
 
-.newsletter form{
-    flex-direction:column;
-    align-items:center;
-}
+        if(target){
 
-.newsletter input{
-    width:100%;
-    max-width:500px;
-}
+            target.scrollIntoView({
+
+                behavior:"smooth"
+
+            });
+
+        }
+
+    });
+
+});
+
+/* Fade In Animation */
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
 
 }
 
+});
 
-/* =========================================
-   MOBILE (768px and below)
-========================================= */
+});
 
-@media (max-width:768px){
+document.querySelectorAll("section").forEach(section=>{
 
-section{
-    padding:70px 0;
-}
+observer.observe(section);
 
-.section-title h2{
-    font-size:30px;
-}
+});
 
-.section-title p{
-    font-size:16px;
-}
+/* Counter Animation */
 
-.hero{
-    padding-top:120px;
-}
+const counters=document.querySelectorAll(".stat h2");
 
-.hero-content h1{
-    font-size:34px;
-}
+counters.forEach(counter=>{
 
-.hero-content p{
-    font-size:16px;
-}
+const update=()=>{
 
-.hero-buttons{
-    flex-direction:column;
-}
+const target=counter.innerText.replace(/\D/g,'');
 
-.btn,
-.btn-outline{
-    width:100%;
-    text-align:center;
-}
+const count=+counter.getAttribute("data-count")||0;
 
-.counter-section .container{
-    grid-template-columns:1fr;
-}
+const increment=Math.ceil(target/100);
 
-.process-grid{
-    grid-template-columns:1fr;
-}
+if(count<target){
 
-.service-grid,
-.product-grid,
-.why-grid,
-.value-grid,
-.footer-grid{
-    grid-template-columns:1fr;
-}
+counter.setAttribute("data-count",count+increment);
 
-.testimonial-slider{
-    grid-template-columns:1fr;
-}
+counter.innerText=(count+increment)+"+";
 
-.contact-form,
-.contact-info{
-    padding:30px;
-}
+setTimeout(update,25);
 
-.newsletter h2{
-    font-size:30px;
-}
+}else{
 
-.cta h2{
-    font-size:30px;
-}
+counter.innerText=target+"+";
 
-.feature-left h2{
-    font-size:30px;
-}
-
-.about-content h3{
-    font-size:28px;
-}
-
-.mission-card,
-.vision-card{
-    padding:30px;
 }
 
 }
 
+update();
 
-/* =========================================
-   SMALL MOBILE (480px and below)
-========================================= */
+});
 
-@media (max-width:480px){
+/* Back To Top Button */
 
-.hero-content h1{
-    font-size:28px;
-}
+const topBtn=document.createElement("button");
 
-.hero-content h4{
-    font-size:18px;
-}
+topBtn.innerHTML="↑";
 
-.section-title h2{
-    font-size:26px;
-}
+topBtn.id="topBtn";
 
-.counter-box h2{
-    font-size:34px;
-}
+document.body.appendChild(topBtn);
 
-.contact-form input,
-.contact-form textarea{
-    padding:12px;
-}
+window.addEventListener("scroll",()=>{
 
-.btn,
-.btn-outline,
-.login-btn{
-    padding:14px 20px;
-}
+if(window.scrollY>500){
 
-.scroll-top{
-    width:45px;
-    height:45px;
-    right:15px;
-    bottom:15px;
-}
+topBtn.style.display="block";
 
-.logo img{
-    height:45px;
-}
+}else{
+
+topBtn.style.display="none";
 
 }
+
+});
+
+topBtn.addEventListener("click",()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
