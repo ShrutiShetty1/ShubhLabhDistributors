@@ -1,49 +1,29 @@
-/*==============================
-SHUBH LABH DISTRIBUTIONS
-Premium Theme
-==============================*/
+/*=========================================
+ SHUBH LABH DISTRIBUTIONS
+ Premium Theme
+=========================================*/
 
-/* Sticky Header */
+// Sticky Header
+const header = document.getElementById("header");
 
-window.addEventListener("scroll", function () {
-
-    const header = document.querySelector("header");
+window.addEventListener("scroll", () => {
 
     if (window.scrollY > 80) {
-
-        header.style.background = "#ffffff";
-        header.style.boxShadow = "0 8px 25px rgba(0,0,0,.08)";
-
-        document.querySelectorAll(".menu a").forEach(link => {
-            link.style.color = "#0B2D5C";
-        });
-
-        document.querySelector(".logo-text h2").style.color = "#0B2D5C";
-
+        header.classList.add("scrolled");
     } else {
-
-        header.style.background = "transparent";
-        header.style.boxShadow = "none";
-
-        document.querySelectorAll(".menu a").forEach(link => {
-            link.style.color = "#ffffff";
-        });
-
-        document.querySelector(".logo-text h2").style.color = "#ffffff";
-
+        header.classList.remove("scrolled");
     }
 
 });
 
-/* Smooth Scroll */
-
+// Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     anchor.addEventListener("click", function(e){
 
         e.preventDefault();
 
-        const target=document.querySelector(this.getAttribute("href"));
+        const target = document.querySelector(this.getAttribute("href"));
 
         if(target){
 
@@ -59,8 +39,41 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 });
 
-/* Fade In Animation */
+// Active Navigation
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-links a");
 
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+sections.forEach(section=>{
+
+const sectionTop=section.offsetTop-120;
+
+if(pageYOffset>=sectionTop){
+
+current=section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(link.getAttribute("href")=="#"+current){
+
+link.classList.add("active");
+
+}
+
+});
+
+});
+
+// Fade Animation
 const observer=new IntersectionObserver((entries)=>{
 
 entries.forEach(entry=>{
@@ -73,6 +86,8 @@ entry.target.classList.add("show");
 
 });
 
+},{
+threshold:0.15
 });
 
 document.querySelectorAll("section").forEach(section=>{
@@ -81,27 +96,26 @@ observer.observe(section);
 
 });
 
-/* Counter Animation */
-
-const counters=document.querySelectorAll(".stat h2");
+// Statistics Counter
+const counters=document.querySelectorAll(".stat-card h2");
 
 counters.forEach(counter=>{
 
+const target=parseInt(counter.innerText);
+
+let count=0;
+
 const update=()=>{
-
-const target=counter.innerText.replace(/\D/g,'');
-
-const count=+counter.getAttribute("data-count")||0;
 
 const increment=Math.ceil(target/100);
 
 if(count<target){
 
-counter.setAttribute("data-count",count+increment);
+count+=increment;
 
-counter.innerText=(count+increment)+"+";
+counter.innerText=count+"+";
 
-setTimeout(update,25);
+requestAnimationFrame(update);
 
 }else{
 
@@ -109,19 +123,18 @@ counter.innerText=target+"+";
 
 }
 
-}
+};
 
 update();
 
 });
 
-/* Back To Top Button */
-
+// Back To Top Button
 const topBtn=document.createElement("button");
 
-topBtn.innerHTML="↑";
-
 topBtn.id="topBtn";
+
+topBtn.innerHTML='<i class="fa-solid fa-arrow-up"></i>';
 
 document.body.appendChild(topBtn);
 
@@ -129,11 +142,11 @@ window.addEventListener("scroll",()=>{
 
 if(window.scrollY>500){
 
-topBtn.style.display="block";
+topBtn.classList.add("show-btn");
 
 }else{
 
-topBtn.style.display="none";
+topBtn.classList.remove("show-btn");
 
 }
 
