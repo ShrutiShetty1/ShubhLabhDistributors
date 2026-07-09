@@ -227,7 +227,10 @@ HERO
 }
 .hero{
 
-height:100vh;
+    min-height:100vh;
+    height:auto;
+    padding:160px 0 80px;
+
 
 background:
 linear-gradient(rgba(10,35,70,.78),
@@ -255,11 +258,11 @@ height:100%;
 }
 
 .hero-content{
-
-max-width:650px;
-
-color:#fff;
-
+    max-width:650px;
+    color:#fff;
+    display:block;
+    position:relative;
+    z-index:10;
 }
 
 .hero-subtitle{
