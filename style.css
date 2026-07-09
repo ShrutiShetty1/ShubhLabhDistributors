@@ -202,7 +202,29 @@ background:#0B2D5C;
 /* ==========================
 HERO
 ========================== */
+.hero-tagline{
+    display:inline-block;
+    background:rgba(212,175,55,0.18);
+    color:#D4AF37;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:20px;
+    letter-spacing:1px;
+}
 
+.hindi-tagline{
+    color:#ffffff;
+    font-size:28px;
+    font-weight:700;
+    margin:15px 0 25px;
+}
+
+.hero-content p strong{
+    color:#D4AF37;
+    font-size:20px;
+}
 .hero{
 
 height:100vh;
