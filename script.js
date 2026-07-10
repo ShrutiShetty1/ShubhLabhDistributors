@@ -189,8 +189,8 @@ document.getElementById("contact-form")
 
 
     emailjs.sendForm(
-        "ID",
-        "YOUR_TEMPLATE_ID",
+        "service_tgvz9ub",
+        "template_jtl6zlm",
         this
     )
 
