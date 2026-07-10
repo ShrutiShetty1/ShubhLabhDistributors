@@ -140,7 +140,7 @@ HERO
     background:
     linear-gradient(rgba(8,35,70,.75),
     rgba(8,35,70,.75)),
-    url("../ihero.jpg");
+    url("hero.jpg");
     background-size:cover;
     background-position:center;
     padding-top:100px;
