@@ -6,66 +6,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-font-family:'Poppins',sans-serif;
-background:#fff;
-color:#333;
-overflow-x:hidden;
+    font-family:'Poppins',sans-serif;
+    color:#333;
+    background:#fff;
+    overflow-x:hidden;
+    line-height:1.7;
 }
 
 img{
-max-width:100%;
-display:block;
+    max-width:100%;
+    display:block;
 }
 
 a{
-text-decoration:none;
+    text-decoration:none;
 }
 
 ul{
-list-style:none;
+    list-style:none;
 }
 
 .container{
-width:90%;
-max-width:1280px;
-margin:auto;
+    width:90%;
+    max-width:1280px;
+    margin:auto;
 }
 
-/* ==========================
+/*=========================
 HEADER
-========================== */
+=========================*/
 
-/*header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-z-index:999;
-transition:.4s;
-}
-
-header.scrolled{
-background:#ffffff;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-}*/
 header{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    z-index:1000;
+    z-index:999;
+    transition:.35s;
     background:transparent;
-    transition:0.35s ease;
 }
 
 header.scrolled{
@@ -74,94 +62,48 @@ header.scrolled{
 }
 
 .navbar{
-
-height:90px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
+    height:90px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .logo{
-
-display:flex;
-
-align-items:center;
-
-gap:15px;
-
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
 
 .logo img{
-
-height:70px;
-
+    height:70px;
 }
 
 .logo-text h2{
-
-font-size:28px;
-
-font-weight:700;
-
-color:#ffffff;
-
-line-height:1;
-
-}
-
-header.scrolled .logo-text h2{
-
-color:#0B2D5C;
-
+    color:#fff;
+    font-size:28px;
+    font-weight:700;
+    line-height:1;
 }
 
 .logo-text span{
+    color:#D4AF37;
+    font-size:13px;
+    letter-spacing:2px;
+    font-weight:600;
+}
 
-color:#D4AF37;
-
-font-size:13px;
-
-letter-spacing:2px;
-
-font-weight:600;
-
+header.scrolled .logo-text h2{
+    color:#0B2D5C;
 }
 
 .nav-links{
-
-display:flex;
-
-gap:35px;
-
+    display:flex;
+    gap:35px;
 }
 
-/*.nav-links a{
-
-color:#ffffff;
-
-font-weight:500;
-
-transition:.3s;
-
-}
-
-header.scrolled .nav-links a{
-
-color:#0B2D5C;
-
-}
-
-.nav-links a:hover{
-
-color:#D4AF37;
-
-}*/
 .nav-links a{
-    color:#ffffff;
+    color:#fff;
+    font-weight:500;
     transition:.3s;
 }
 
@@ -169,213 +111,129 @@ header.scrolled .nav-links a{
     color:#0B2D5C;
 }
 
-.nav-links a:hover{
-    color:#D4AF37;
-}
-
-header.scrolled .nav-links a.active{
+.nav-links a:hover,
+.nav-links a.active{
     color:#D4AF37;
 }
 
 .login-btn{
-
-background:#D4AF37;
-
-color:#fff;
-
-padding:14px 28px;
-
-border-radius:40px;
-
-font-weight:600;
-
-transition:.3s;
-
+    background:#D4AF37;
+    color:#fff;
+    padding:14px 28px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
 }
 
 .login-btn:hover{
-
-background:#0B2D5C;
-
+    background:#0B2D5C;
 }
 
-/* ==========================
+/*=========================
 HERO
-========================== */
-.hero-tagline{
-    display:inline-block;
-    background:rgba(212,175,55,0.18);
-    color:#D4AF37;
-    padding:8px 18px;
-    border-radius:30px;
-    font-size:14px;
-    font-weight:600;
-    margin-bottom:20px;
-    letter-spacing:1px;
-}
+=========================*/
 
-.hindi-tagline{
-    color:#ffffff;
-    font-size:28px;
-    font-weight:700;
-    margin:15px 0 25px;
-}
-
-.hero-content p strong{
-    color:#D4AF37;
-    font-size:20px;
-}
 .hero{
-
     min-height:100vh;
-    height:auto;
-    padding:160px 0 80px;
-
-
-background:
-linear-gradient(rgba(10,35,70,.78),
-rgba(10,35,70,.78)),
-url("../images/hero.jpg");
-
-background-size:cover;
-
-background-position:center;
-
-display:flex;
-
-align-items:center;
-
+    display:flex;
+    align-items:center;
+    background:
+    linear-gradient(rgba(8,35,70,.75),
+    rgba(8,35,70,.75)),
+    url("../images/hero.jpg");
+    background-size:cover;
+    background-position:center;
+    padding-top:100px;
 }
 
 .hero-container{
-
-display:flex;
-
-align-items:center;
-
-height:100%;
-
+    display:flex;
+    align-items:center;
 }
 
 .hero-content{
-    max-width:650px;
+    max-width:700px;
     color:#fff;
-    display:block;
-    position:relative;
-    z-index:10;
 }
 
-.hero-subtitle{
-
-display:inline-block;
-
-padding:8px 20px;
-
-background:#D4AF37;
-
-border-radius:30px;
-
-font-size:13px;
-
-letter-spacing:1px;
-
-margin-bottom:25px;
-
+.hero-tagline{
+    display:inline-block;
+    background:rgba(212,175,55,.2);
+    color:#D4AF37;
+    padding:10px 22px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:25px;
 }
 
 .hero h1{
-
-font-size:64px;
-
-font-weight:700;
-
-line-height:1.15;
-
-margin-bottom:25px;
-
+    font-size:64px;
+    line-height:1.15;
+    margin-bottom:20px;
+    font-weight:800;
 }
 
 .hero h1 span{
+    color:#D4AF37;
+}
 
-color:#D4AF37;
-
+.hindi-tagline{
+    color:#fff;
+    font-size:28px;
+    margin-bottom:25px;
 }
 
 .hero p{
+    color:#eee;
+    font-size:18px;
+    margin-bottom:40px;
+}
 
-font-size:18px;
-
-line-height:1.9;
-
-margin-bottom:40px;
-
-color:#eee;
-
+.hero p strong{
+    color:#D4AF37;
 }
 
 .hero-buttons{
-
-display:flex;
-
-gap:20px;
-
+    display:flex;
+    gap:20px;
 }
 
 .btn-primary{
-
-background:#D4AF37;
-
-color:#fff;
-
-padding:16px 35px;
-
-border-radius:40px;
-
-font-weight:600;
-
-transition:.35s;
-
+    display:inline-block;
+    background:#D4AF37;
+    color:#fff;
+    padding:16px 34px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
 }
 
 .btn-primary:hover{
-
-background:#fff;
-
-color:#0B2D5C;
-
+    background:#fff;
+    color:#0B2D5C;
 }
 
 .btn-secondary{
-
-border:2px solid #fff;
-
-color:#fff;
-
-padding:16px 35px;
-
-border-radius:40px;
-
-font-weight:600;
-
-transition:.35s;
-
+    display:inline-block;
+    border:2px solid #fff;
+    color:#fff;
+    padding:16px 34px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
 }
 
 .btn-secondary:hover{
-
-background:#fff;
-
-color:#0B2D5C;
-
+    background:#fff;
+    color:#0B2D5C;
 }
-
 /*=========================================
-ABOUT SECTION
+SECTION HEADINGS
 =========================================*/
 
-.about{
+section{
     padding:100px 0;
-    background:#fff;
 }
 
 .section-heading{
@@ -390,7 +248,7 @@ ABOUT SECTION
     font-weight:700;
     letter-spacing:2px;
     text-transform:uppercase;
-    margin-bottom:12px;
+    margin-bottom:15px;
 }
 
 .section-heading h2{
@@ -400,10 +258,18 @@ ABOUT SECTION
 }
 
 .section-heading p{
-    max-width:750px;
+    max-width:760px;
     margin:auto;
     color:#666;
     line-height:1.8;
+}
+
+/*=========================================
+ABOUT
+=========================================*/
+
+.about{
+    background:#ffffff;
 }
 
 .about-wrapper{
@@ -428,12 +294,12 @@ ABOUT SECTION
 .about-content p{
     color:#666;
     line-height:1.9;
-    margin-bottom:35px;
+    margin-bottom:25px;
 }
 
-/*=========================================
-FEATURES
-=========================================*/
+.about-content .btn-primary{
+    margin-bottom:40px;
+}
 
 .about-features{
     display:grid;
@@ -443,13 +309,12 @@ FEATURES
 
 .feature-item{
     display:flex;
-    align-items:flex-start;
     gap:18px;
     padding:25px;
-    border-radius:18px;
     background:#fff;
+    border-radius:18px;
     box-shadow:0 12px 35px rgba(0,0,0,.08);
-    transition:.35s;
+    transition:.3s;
 }
 
 .feature-item:hover{
@@ -459,12 +324,12 @@ FEATURES
 .feature-item i{
     width:60px;
     height:60px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
     background:#D4AF37;
     color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
     font-size:24px;
 }
 
@@ -476,42 +341,14 @@ FEATURES
 .feature-item p{
     margin:0;
     font-size:15px;
-    color:#777;
 }
 
 /*=========================================
-HOW WE WORK
+HOW IT WORKS
 =========================================*/
-.workflow-note{
-    margin-top:60px;
-    text-align:center;
-    background:#fff;
-    padding:40px;
-    border-radius:20px;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
-}
 
-.workflow-note h3{
-    color:#0B2D5C;
-    margin-bottom:20px;
-    font-size:28px;
-}
-
-.workflow-note p{
-    color:#555;
-    line-height:1.9;
-    font-size:18px;
-}
-
-.flow-description{
-    margin-top:20px;
-    max-width:900px;
-    margin-left:auto;
-    margin-right:auto;
-}
 .how-we-work{
-    background:#f7f9fc;
-    padding:100px 0;
+    background:#F7F9FC;
 }
 
 .process-grid{
@@ -522,12 +359,12 @@ HOW WE WORK
 
 .process-card{
     background:#fff;
-    border-radius:20px;
     padding:40px 30px;
+    border-radius:20px;
     text-align:center;
     position:relative;
-    transition:.35s;
     box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
 .process-card:hover{
@@ -544,9 +381,9 @@ HOW WE WORK
 }
 
 .process-card i{
-    font-size:48px;
+    font-size:50px;
     color:#D4AF37;
-    margin-bottom:25px;
+    margin-bottom:20px;
 }
 
 .process-card h3{
@@ -560,60 +397,110 @@ HOW WE WORK
 }
 
 /*=========================================
-WHY CHOOSE US
+BUSINESS FLOW
+=========================================*/
+
+.workflow-note{
+    margin-top:60px;
+    background:#fff;
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.workflow-note h3{
+    text-align:center;
+    color:#0B2D5C;
+    margin-bottom:35px;
+}
+
+.business-flow{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.flow-item{
+    width:180px;
+    background:#0B2D5C;
+    color:#fff;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+}
+
+.flow-item i{
+    font-size:34px;
+    color:#D4AF37;
+    margin-bottom:12px;
+}
+
+.flow-arrow{
+    font-size:28px;
+    color:#D4AF37;
+}
+
+.flow-description{
+    margin-top:35px;
+    text-align:center;
+    color:#666;
+    line-height:1.9;
+}
+/*=========================================
+WHY JOIN SHUBH LABH
 =========================================*/
 
 .why-choose{
-    padding:100px 0;
+    background:#ffffff;
 }
 
 .why-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(3,1fr);
     gap:30px;
 }
 
 .why-card{
     background:#fff;
-    text-align:center;
     padding:40px 30px;
     border-radius:20px;
+    text-align:center;
     box-shadow:0 15px 40px rgba(0,0,0,.08);
-    transition:.35s;
+    transition:all .35s ease;
+    border-top:5px solid transparent;
 }
 
 .why-card:hover{
-    background:#0B2D5C;
     transform:translateY(-10px);
-}
-
-.why-card:hover h3,
-.why-card:hover p{
-    color:#fff;
+    border-top:5px solid #D4AF37;
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
 }
 
 .why-card i{
-    font-size:48px;
+    font-size:52px;
     color:#D4AF37;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
 .why-card h3{
     color:#0B2D5C;
     margin-bottom:15px;
+    font-size:24px;
 }
 
 .why-card p{
     color:#666;
     line-height:1.8;
 }
+
 /*=========================================
 OUR SERVICES
 =========================================*/
 
 .services{
-    padding:100px 0;
-    background:#f8fafc;
+    background:#F7F9FC;
 }
 
 .services-grid{
@@ -628,29 +515,56 @@ OUR SERVICES
     border-radius:20px;
     text-align:center;
     box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:all .35s ease;
+    overflow:hidden;
+    position:relative;
+}
+
+.service-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:#D4AF37;
+    transform:scaleX(0);
     transition:.35s;
+}
+
+.service-card:hover::before{
+    transform:scaleX(1);
 }
 
 .service-card:hover{
     transform:translateY(-10px);
-    background:#0B2D5C;
-}
-
-.service-card:hover h3,
-.service-card:hover p{
-    color:#fff;
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
 }
 
 .service-card i{
-    font-size:50px;
+    width:90px;
+    height:90px;
+    margin:auto;
+    background:#0B2D5C;
     color:#D4AF37;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:36px;
     margin-bottom:25px;
+    transition:.35s;
+}
+
+.service-card:hover i{
+    background:#D4AF37;
+    color:#fff;
 }
 
 .service-card h3{
-    font-size:24px;
     color:#0B2D5C;
     margin-bottom:15px;
+    font-size:24px;
 }
 
 .service-card p{
@@ -659,35 +573,63 @@ OUR SERVICES
 }
 
 /*=========================================
-PRODUCTS
+COMMON BUTTON ALIGNMENT
+=========================================*/
+
+.services .btn-primary,
+.products .btn-primary,
+.careers .btn-primary{
+    margin-top:10px;
+}
+
+/*=========================================
+CARD ANIMATION
+=========================================*/
+
+.feature-item,
+.process-card,
+.why-card,
+.service-card{
+    transition:all .35s ease;
+}
+
+.feature-item:hover,
+.process-card:hover,
+.why-card:hover,
+.service-card:hover{
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
+}
+
+/*=========================================
+OUR PRODUCTS
 =========================================*/
 
 .products{
-    padding:100px 0;
-    background:#fff;
+    background:#ffffff;
 }
 
 .product-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(4,1fr);
     gap:30px;
 }
 
 .product-card{
     background:#fff;
-    overflow:hidden;
     border-radius:20px;
+    overflow:hidden;
     box-shadow:0 15px 40px rgba(0,0,0,.08);
-    transition:.35s;
+    transition:all .35s ease;
 }
 
 .product-card:hover{
     transform:translateY(-10px);
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
 }
 
 .product-card img{
     width:100%;
-    height:260px;
+    height:250px;
     object-fit:cover;
 }
 
@@ -697,117 +639,147 @@ PRODUCTS
 
 .product-content h3{
     color:#0B2D5C;
-    margin-bottom:12px;
+    margin-bottom:15px;
+    font-size:24px;
 }
 
 .product-content p{
     color:#666;
-    line-height:1.7;
-}
-
-/*=========================================
-STATISTICS
-=========================================*/
-
-.statistics{
-    background:#0B2D5C;
-    color:#fff;
-    padding:90px 0;
-}
-
-.stats-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:30px;
-    text-align:center;
-}
-
-.stat-card h2{
-    font-size:52px;
-    color:#D4AF37;
-    margin-bottom:10px;
-}
-
-.stat-card p{
-    font-size:18px;
-    color:#f5f5f5;
-}
-
-/*=========================================
-TESTIMONIALS
-=========================================*/
-
-.testimonials{
-    padding:100px 0;
-    background:#f8fafc;
-}
-
-.testimonial-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-}
-
-.testimonial-card{
-    background:#fff;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
-    position:relative;
-    transition:.35s;
-}
-
-.testimonial-card:hover{
-    transform:translateY(-8px);
-}
-
-.testimonial-card::before{
-    content:"★★★★★";
-    color:#D4AF37;
-    display:block;
-    margin-bottom:20px;
-    letter-spacing:3px;
-    font-size:18px;
-}
-
-.testimonial-card p{
-    color:#666;
-    line-height:1.9;
-    font-style:italic;
-    margin-bottom:25px;
-}
-
-.testimonial-card h4{
-    color:#0B2D5C;
-}
-
-/*=========================================
-CONTACT BANNER
-=========================================*/
-
-.contact-banner{
-    background:linear-gradient(135deg,#0B2D5C,#164987);
-    color:#fff;
-    padding:70px 0;
-}
-
-.contact-banner-content{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:40px;
-}
-
-.contact-banner h2{
-    font-size:42px;
-    margin-bottom:15px;
-}
-
-.contact-banner p{
-    color:#e4e4e4;
     line-height:1.8;
 }
 
+.products .section-heading h3{
+    color:#0B2D5C;
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+/*=========================================
+CAREERS
+=========================================*/
+
+.careers{
+    background:#F7F9FC;
+}
+
+.careers .service-card{
+    min-height:340px;
+}
+
+.careers .service-card h3{
+    margin-top:15px;
+}
+
+/*=========================================
+JOIN OUR TEAM BANNER
+=========================================*/
+
+.contact-banner{
+
+    background:linear-gradient(135deg,#0B2D5C,#184D90);
+
+    color:#fff;
+
+    padding:80px 0;
+
+}
+
+.contact-banner-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:60px;
+
+}
+
+.contact-banner h2{
+
+    font-size:42px;
+
+    margin:15px 0;
+
+}
+
+.contact-banner h3{
+
+    color:#D4AF37;
+
+    margin-bottom:20px;
+
+}
+
+.contact-banner p{
+
+    color:#f2f2f2;
+
+    line-height:1.9;
+
+}
+
+.contact-banner .btn-primary{
+
+    margin-right:15px;
+
+}
+
+.contact-banner .btn-secondary{
+
+    border:2px solid #fff;
+
+}
+
+/*=========================================
+SECTION SPACING
+=========================================*/
+
+.about,
+.how-we-work,
+.why-choose,
+.services,
+.products,
+.careers{
+
+    padding:110px 0;
+
+}
+
+/*=========================================
+HOVER EFFECTS
+=========================================*/
+
+.product-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.product-card img{
+
+    transition:.5s;
+
+}
+
+.service-card:hover i,
+.why-card:hover i,
+.feature-item:hover i{
+
+    transform:rotate(10deg) scale(1.08);
+
+    transition:.35s;
+
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.login-btn:hover{
+
+    transform:translateY(-3px);
+
+}
 /*=========================================
 FOOTER
 =========================================*/
@@ -826,7 +798,7 @@ footer{
 }
 
 .footer-about img{
-    width:80px;
+    width:90px;
     margin-bottom:20px;
 }
 
@@ -836,26 +808,21 @@ footer{
 }
 
 .footer-about p{
-    color:#d8d8d8;
-    line-height:1.8;
+    color:#d7d7d7;
+    line-height:1.9;
 }
 
 .footer-grid h4{
-    margin-bottom:25px;
     color:#D4AF37;
-}
-
-.footer-grid ul{
-    list-style:none;
+    margin-bottom:25px;
 }
 
 .footer-grid ul li{
-    margin-bottom:14px;
+    margin-bottom:15px;
 }
 
 .footer-grid ul li a{
-    color:#d8d8d8;
-    text-decoration:none;
+    color:#d7d7d7;
     transition:.3s;
 }
 
@@ -865,89 +832,124 @@ footer{
 }
 
 .footer-grid p{
-    color:#d8d8d8;
-    line-height:2;
+    color:#d7d7d7;
+    margin-bottom:12px;
+}
+
+.social-icons{
+    display:flex;
+    gap:15px;
+    margin-top:25px;
+}
+
+.social-icons a{
+    width:45px;
+    height:45px;
+    background:#D4AF37;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.35s;
+}
+
+.social-icons a:hover{
+    background:#fff;
+    color:#0B2D5C;
+    transform:translateY(-5px);
 }
 
 .footer-bottom{
     text-align:center;
+    border-top:1px solid rgba(255,255,255,.1);
     padding:25px;
-    border-top:1px solid rgba(255,255,255,.12);
     color:#cccccc;
 }
 
 /*=========================================
-SECTION SPACING
+BACK TO TOP BUTTON
 =========================================*/
 
-section{
-    position:relative;
+#topBtn{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:#D4AF37;
+    color:#fff;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    opacity:0;
+    visibility:hidden;
+    transition:.35s;
+    z-index:999;
 }
 
-.section-heading{
-    margin-bottom:70px;
+#topBtn.show-btn{
+    opacity:1;
+    visibility:visible;
+}
+
+#topBtn:hover{
+    background:#0B2D5C;
 }
 
 /*=========================================
-HOVER EFFECTS
+SCROLL ANIMATION
 =========================================*/
 
-.product-card,
-.service-card,
-.process-card,
-.feature-item,
-.why-card,
-.testimonial-card{
-    transition:all .35s ease;
+section{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .8s ease;
 }
 
-.product-card:hover,
-.service-card:hover,
-.process-card:hover,
-.feature-item:hover,
-.why-card:hover,
-.testimonial-card:hover{
-    box-shadow:0 25px 60px rgba(0,0,0,.15);
+section.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
 /*=========================================
 RESPONSIVE
 =========================================*/
 
-@media (max-width:1200px){
-
-.hero h1{
-font-size:56px;
-}
+@media(max-width:1100px){
 
 .about-wrapper{
 grid-template-columns:1fr;
 }
 
 .process-grid,
-.why-grid,
-.stats-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
 .services-grid,
 .product-grid,
-.testimonial-grid{
+.why-grid{
 grid-template-columns:repeat(2,1fr);
 }
 
+.footer-grid{
+grid-template-columns:1fr 1fr;
 }
 
-@media (max-width:768px){
-
-header{
-background:#0B2D5C;
+.contact-banner-content{
+flex-direction:column;
+text-align:center;
 }
+
+}
+
+@media(max-width:768px){
 
 .navbar{
 flex-direction:column;
-padding:20px 0;
 height:auto;
+padding:20px 0;
 }
 
 .nav-links{
@@ -958,14 +960,8 @@ margin:20px 0;
 }
 
 .hero{
-    text-align:center;
-    padding:120px 0 80px;
-    min-height:calc(100vh - 90px);
-}
-
-.hero-content{
-    max-width:100%;
-    width:100%;
+text-align:center;
+padding-top:140px;
 }
 
 .hero h1{
@@ -978,48 +974,42 @@ align-items:center;
 }
 
 .hero-buttons a{
-width:220px;
+width:230px;
+text-align:center;
+}
+
+.process-grid,
+.services-grid,
+.product-grid,
+.why-grid,
+.about-features,
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.business-flow{
+flex-direction:column;
+}
+
+.flow-arrow{
+transform:rotate(90deg);
+}
+
+.contact-banner .btn-primary,
+.contact-banner .btn-secondary{
+display:block;
+margin:15px auto;
+width:240px;
 text-align:center;
 }
 
 .section-heading h2{
-font-size:32px;
-}
-
-.about-features{
-grid-template-columns:1fr;
-}
-
-.process-grid,
-.why-grid,
-.services-grid,
-.product-grid,
-.stats-grid,
-.testimonial-grid,
-.footer-grid{
-grid-template-columns:1fr;
-}
-
-.contact-banner-content{
-flex-direction:column;
-text-align:center;
-}
-
-.contact-banner h2{
-font-size:32px;
-}
-
-.footer-grid{
-text-align:center;
-}
-
-.footer-about img{
-margin:auto auto 20px;
+font-size:34px;
 }
 
 }
 
-@media (max-width:480px){
+@media(max-width:480px){
 
 .container{
 width:92%;
@@ -1037,102 +1027,18 @@ font-size:16px;
 font-size:28px;
 }
 
-.stat-card h2{
-font-size:40px;
-}
-
-.btn-primary,
-.btn-secondary,
-.login-btn{
-padding:14px 24px;
-}
-
-}
-
-/*=========================
-SCROLL ANIMATION
-=========================*/
-
-section{
-    opacity:0;
-    transform:translateY(60px);
-    transition:all .8s ease;
-}
-
-section.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-/*=========================
-ACTIVE MENU
-=========================*/
-
-.nav-links a.active{
-    color:#D4AF37;
-}
-
-/*=========================
-BACK TO TOP
-=========================*/
-
-#topBtn{
-
-position:fixed;
-
-right:25px;
-
-bottom:25px;
-
-width:55px;
-
+.logo img{
 height:55px;
-
-border:none;
-
-border-radius:50%;
-
-background:#D4AF37;
-
-color:#fff;
-
-font-size:20px;
-
-cursor:pointer;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-opacity:0;
-
-visibility:hidden;
-
-transition:.3s;
-
-box-shadow:0 10px 25px rgba(0,0,0,.25);
-
-z-index:9999;
-
 }
 
-#topBtn.show-btn{
-
-opacity:1;
-
-visibility:visible;
-
+.logo-text h2{
+font-size:22px;
 }
 
-#topBtn:hover{
-
-background:#0B2D5C;
-
-transform:translateY(-5px);
-
+.login-btn{
+padding:12px 22px;
 }
 
+}
 
 
