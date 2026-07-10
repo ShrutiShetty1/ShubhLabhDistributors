@@ -176,7 +176,7 @@ if (menuToggle && mobileNav) {
 
 (function(){
 
-    emailjs.init("YOUR_PUBLIC_KEY");
+    emailjs.init("vhJD7jOsmCgKUpmMi");
 
 })();
 
@@ -189,7 +189,7 @@ document.getElementById("contact-form")
 
 
     emailjs.sendForm(
-        "YOUR_SERVICE_ID",
+        "ID",
         "YOUR_TEMPLATE_ID",
         this
     )
