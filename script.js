@@ -210,4 +210,39 @@ document.getElementById("contact-form")
 
 });
 
+/* ===========================
+   CAREER FORM
+=========================== */
 
+const careerForm = document.getElementById("career-form");
+
+if (careerForm) {
+
+    careerForm.addEventListener("submit", function(e) {
+
+        e.preventDefault();
+
+        emailjs.sendForm(
+            "service_tgvz9ub",
+            "YOUR_CAREER_TEMPLATE_ID",
+            this,
+            "vhJD7jOsmCgKUpmMi"
+        )
+        .then(function() {
+
+            alert("Thank you! Your job application has been submitted successfully.");
+
+            careerForm.reset();
+
+        })
+        .catch(function(error) {
+
+            console.log(error);
+
+            alert("Failed to submit application. Please try again.");
+
+        });
+
+    });
+
+}
