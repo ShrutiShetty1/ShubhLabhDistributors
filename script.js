@@ -237,7 +237,7 @@ if (careerForm) {
         .catch(function(error) {
 
             console.log(error);
-
+alert(JSON.stringify(error));
             alert("Failed to submit application. Please try again.");
 
         });
