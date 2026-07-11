@@ -225,8 +225,7 @@ if (careerForm) {
         emailjs.sendForm(
             "service_tgvz9ub",
             "templates_3uhu9cm",
-            this,
-            "vhJD7jOsmCgKUpmMi"
+            this
         )
         .then(function() {
 
