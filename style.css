@@ -1146,3 +1146,15 @@ header.scrolled .menu-toggle{
         text-align:center;
     }
 }
+.nav-links.active{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: #16386B;
+    overflow-y: auto;
+    z-index: 999;
+}
