@@ -1165,16 +1165,34 @@ header.scrolled .menu-toggle{
     }
 }
 .nav-links.active{
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 80px);
-    background: #16386B;
-    overflow-y: auto;
-    z-index: 999;
+    display:flex;
+    flex-direction:column;
+    position:fixed;
+    top:80px;
+    left:0;
+    width:100%;
+    background:#0B2D5C;
+    max-height:calc(100vh - 80px);
+    overflow-y:auto;
+    padding:15px 0;
+    z-index:999;
+}
+
+.nav-links.active li{
+    width:100%;
+}
+
+.nav-links.active li a{
+    display:block;
+    padding:15px 20px;
+    text-align:center;
+    color:#fff;
+}
+
+.nav-links.active .login-btn{
+    width:220px;
+    margin:20px auto;
+    text-align:center;
 }
 @media(max-width:768px){
 
