@@ -224,7 +224,7 @@ if (careerForm) {
 
         emailjs.sendForm(
             "service_tgvz9ub",
-            "templates_3uhu9cm",
+            "template_eiq1f0f",
             this
         )
         .then(function() {
@@ -237,7 +237,6 @@ if (careerForm) {
         .catch(function(error) {
 
             console.log(error);
-alert(JSON.stringify(error));
             alert("Failed to submit application. Please try again.");
 
         });
