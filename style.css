@@ -731,7 +731,25 @@ JOIN OUR TEAM BANNER
     border:2px solid #fff;
 
 }
+.contact-form{
+    width:100%;
+}
 
+.contact-form input,
+.contact-form textarea,
+.contact-form select{
+    width:100%;
+    padding:16px;
+    font-size:16px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    margin-bottom:18px;
+    box-sizing:border-box;
+}
+
+.contact-form textarea{
+    min-height:140px;
+}
 /*=========================================
 SECTION SPACING
 =========================================*/
@@ -1157,4 +1175,18 @@ header.scrolled .menu-toggle{
     background: #16386B;
     overflow-y: auto;
     z-index: 999;
+}
+@media(max-width:768px){
+
+.contact-form{
+    padding:20px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select{
+    width:100%;
+    font-size:16px;
+}
+
 }
