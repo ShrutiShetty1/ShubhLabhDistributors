@@ -224,7 +224,7 @@ if (careerForm) {
 
         emailjs.sendForm(
             "service_tgvz9ub",
-            "YOUR_CAREER_TEMPLATE_ID",
+            "templates_3uhu9cm",
             this,
             "vhJD7jOsmCgKUpmMi"
         )
