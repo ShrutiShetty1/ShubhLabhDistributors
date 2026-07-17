@@ -259,3 +259,11 @@ window.onclick = function(event) {
     }
 };
 
+<div id="imageModal" class="image-modal">
+
+    <span class="close-image">&times;</span>
+
+    <img id="modalImage">
+
+</div>
+
