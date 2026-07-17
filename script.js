@@ -244,3 +244,18 @@ if (careerForm) {
     });
 
 }
+function openGallery() {
+    document.getElementById("galleryPopup").style.display = "flex";
+}
+
+function closeGallery() {
+    document.getElementById("galleryPopup").style.display = "none";
+}
+
+window.onclick = function(event) {
+    const popup = document.getElementById("galleryPopup");
+    if (event.target === popup) {
+        popup.style.display = "none";
+    }
+};
+
