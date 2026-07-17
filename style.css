@@ -233,7 +233,7 @@ header.scrolled .menu-toggle{
 /*=========================
 HERO
 =========================
-
+/*
 .hero{
     min-height:100vh;
     display:flex;
@@ -245,16 +245,45 @@ HERO
     background-size:cover;
     background-position:center;
     padding-top:100px;
-}
+}*/
 
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:flex-end;
+    background:
+        linear-gradient(
+            rgba(0,0,0,.08),
+            rgba(0,0,0,.12)
+        ),
+        url("hero.jpg");
+    background-size:cover;
+    background-position:center top;
+    background-repeat:no-repeat;
+    padding:0 0 70px;
+}
+/*
 .hero-container{
     display:flex;
     align-items:center;
-}
+}*/
 
+.hero-container{
+    width:100%;
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-end;
+}
+/*
 .hero-content{
     max-width:700px;
     color:#fff;
+}*/
+
+.hero-content{
+    max-width:700px;
+    margin-left:30px;
+    margin-bottom:40px;
 }
 
 .hero-tagline{
@@ -294,12 +323,18 @@ HERO
 .hero p strong{
     color:#D4AF37;
 }
+/*
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}*/
 
 .hero-buttons{
     display:flex;
     gap:20px;
+    margin-top:0;
 }
-
+/*
 .btn-primary{
     display:inline-block;
     background:#D4AF37;
@@ -329,6 +364,50 @@ HERO
     background:#fff;
     color:#0B2D5C;
 }*/
+
+.btn-primary{
+    background:#D4AF37;
+    color:#fff;
+    padding:18px 42px;
+    border-radius:50px;
+    font-size:17px;
+    font-weight:700;
+    box-shadow:0 10px 25px rgba(212,175,55,.35);
+}
+
+.btn-secondary{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(8px);
+    border:2px solid #fff;
+    color:#fff;
+    padding:18px 42px;
+    border-radius:50px;
+    font-size:17px;
+    font-weight:700;
+}
+
+@media(max-width:768px){
+
+.hero{
+    align-items:flex-end;
+    padding-bottom:40px;
+}
+
+.hero-content{
+    margin:0 auto 20px;
+    text-align:center;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    align-items:center;
+}
+
+.hero-buttons a{
+    width:260px;
+}
+
+}
 
 /*=========================
 HERO
