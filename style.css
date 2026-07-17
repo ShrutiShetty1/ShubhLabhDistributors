@@ -45,7 +45,7 @@ ul{
 /*=========================
 HEADER
 =========================*/
-
+/*
 header{
     position:fixed;
     top:0;
@@ -127,6 +127,107 @@ header.scrolled .nav-links a{
 
 .login-btn:hover{
     background:#0B2D5C;
+}
+*/
+/*=========================
+HEADER
+=========================*/
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:transparent;
+    transition:.35s;
+    z-index:999;
+}
+
+header.scrolled{
+    background:#fff;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.navbar{
+    display:flex;
+    align-items:center;
+    height:90px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    color:#fff;
+}
+
+.logo img{
+    height:65px;
+}
+
+.logo-text h2{
+    font-size:28px;
+    line-height:1;
+    color:#fff;
+    font-weight:700;
+}
+
+.logo-text span{
+    color:#D4AF37;
+    font-size:12px;
+    letter-spacing:2px;
+    font-weight:600;
+}
+
+header.scrolled .logo-text h2{
+    color:#0B2D5C;
+}
+
+/* Push menu to right */
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:32px;
+    margin-left:auto;
+}
+
+.nav-links a{
+    color:#fff;
+    font-weight:500;
+    transition:.3s;
+}
+
+header.scrolled .nav-links a{
+    color:#0B2D5C;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color:#D4AF37;
+}
+
+.login-btn{
+    background:#D4AF37;
+    color:#fff !important;
+    padding:13px 28px;
+    border-radius:40px;
+    font-weight:600;
+}
+
+.login-btn:hover{
+    background:#0B2D5C;
+    color:#fff !important;
+}
+
+.menu-toggle{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+    color:#fff;
+}
+
+header.scrolled .menu-toggle{
+    color:#0B2D5C;
 }
 
 /*=========================
@@ -1063,7 +1164,7 @@ padding:12px 22px;
 MOBILE HAMBURGER MENU
 =========================================*/
 
-/* Hide hamburger on desktop */
+/* Hide hamburger on desktop 
 .menu-toggle{
     display:none;
     font-size:28px;
@@ -1075,7 +1176,7 @@ header.scrolled .menu-toggle{
     color:#0B2D5C;
 }
 
-/* Mobile */
+/* Mobile 
 @media (max-width:768px){
 
     .navbar{
@@ -1193,6 +1294,76 @@ header.scrolled .menu-toggle{
     width:220px;
     margin:20px auto;
     text-align:center;
+}*/
+
+/*=========================================
+MOBILE MENU
+=========================================*/
+
+@media(max-width:768px){
+
+.navbar{
+    height:80px;
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    height:55px;
+}
+
+.logo-text h2{
+    font-size:22px;
+}
+
+.logo-text span{
+    font-size:11px;
+}
+
+.menu-toggle{
+    display:block;
+    margin-left:auto;
+    z-index:1001;
+}
+
+.nav-links{
+    position:fixed;
+    top:80px;
+    left:0;
+    width:100%;
+    background:#0B2D5C;
+
+    display:flex;
+    flex-direction:column;
+
+    max-height:0;
+    overflow:hidden;
+
+    transition:.35s;
+}
+
+.nav-links.active{
+    max-height:100vh;
+    padding:15px 0;
+}
+
+.nav-links li{
+    width:100%;
+}
+
+.nav-links li a{
+    display:block;
+    text-align:center;
+    padding:16px;
+    color:#fff;
+}
+
+.login-btn{
+    width:220px;
+    margin:20px auto;
+    text-align:center;
+}
+
 }
 @media(max-width:768px){
 
