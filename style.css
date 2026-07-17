@@ -232,7 +232,7 @@ header.scrolled .menu-toggle{
 
 /*=========================
 HERO
-=========================*/
+=========================
 
 .hero{
     min-height:100vh;
@@ -328,6 +328,159 @@ HERO
 .btn-secondary:hover{
     background:#fff;
     color:#0B2D5C;
+}*/
+
+/*=========================
+HERO
+=========================*/
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:flex-start;
+
+    /* Bright attractive image */
+    background:url("hero.jpg") center top / contain no-repeat;
+
+    /* Soft warm background around image */
+    background-color:#f5f1e8;
+
+    padding-top:110px;
+    overflow:hidden;
+}
+
+/* Very light overlay only for readability */
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to bottom,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.12)
+    );
+    z-index:1;
+}
+
+.hero-container{
+    position:relative;
+    z-index:2;
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-content{
+    max-width:700px;
+    color:#0B2D5C;
+    text-align:center;
+
+    /* Move content down */
+    margin-top:240px;
+}
+
+.hero-tagline{
+    display:inline-block;
+    background:rgba(212,175,55,.18);
+    color:#B8860B;
+    padding:12px 24px;
+    border-radius:40px;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:.5px;
+    margin-bottom:40px;
+    backdrop-filter:blur(6px);
+}
+
+/* Hidden because text already exists in image */
+.hero h1,
+.hindi-tagline,
+.hero p{
+    display:none;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.btn-primary{
+    display:inline-block;
+    background:#D4AF37;
+    color:#fff;
+    padding:16px 34px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
+    box-shadow:0 12px 25px rgba(212,175,55,.35);
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    background:#b8901f;
+}
+
+.btn-secondary{
+    display:inline-block;
+    border:2px solid #0B2D5C;
+    color:#0B2D5C;
+    background:rgba(255,255,255,.7);
+    padding:16px 34px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
+    backdrop-filter:blur(6px);
+}
+
+.btn-secondary:hover{
+    background:#0B2D5C;
+    color:#fff;
+}
+
+/* Tablet */
+@media(max-width:992px){
+
+.hero{
+    background-size:cover;
+    background-position:center top;
+}
+
+.hero-content{
+    margin-top:180px;
+}
+
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+.hero{
+    min-height:90vh;
+    background-size:cover;
+    background-position:center top;
+    padding-top:90px;
+}
+
+.hero-content{
+    margin-top:120px;
+    text-align:center;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
+}
+
+.hero-buttons a{
+    width:260px;
+    text-align:center;
+}
+
 }
 /*=========================================
 SECTION HEADINGS
