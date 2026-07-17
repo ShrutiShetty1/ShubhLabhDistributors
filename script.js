@@ -259,23 +259,27 @@ window.onclick = function(event) {
     }
 };
 
-function openImage(imageSrc) {
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+const closeBtn = document.querySelector(".close-image");
 
-    document.getElementById("modalImage").src = imageSrc;
-    document.getElementById("imageModal").style.display = "flex";
+// Open modal
+document.querySelectorAll(".product-card img").forEach(img => {
+    img.addEventListener("click", function () {
+        modal.style.display = "flex";
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+    });
+});
 
-}
+// Close modal
+closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+});
 
-document.querySelector(".close-image").onclick = function () {
-
-    document.getElementById("imageModal").style.display = "none";
-
-};
-
-document.getElementById("imageModal").onclick = function (e) {
-
-    if (e.target === this) {
-        this.style.display = "none";
+// Close when clicking outside the image
+modal.addEventListener("click", function (e) {
+    if (e.target === modal) {
+        modal.style.display = "none";
     }
-
-};
+});
