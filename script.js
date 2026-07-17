@@ -259,11 +259,23 @@ window.onclick = function(event) {
     }
 };
 
-<div id="imageModal" class="image-modal">
+function openImage(imageSrc) {
 
-    <span class="close-image">&times;</span>
+    document.getElementById("modalImage").src = imageSrc;
+    document.getElementById("imageModal").style.display = "flex";
 
-    <img id="modalImage">
+}
 
-</div>
+document.querySelector(".close-image").onclick = function () {
 
+    document.getElementById("imageModal").style.display = "none";
+
+};
+
+document.getElementById("imageModal").onclick = function (e) {
+
+    if (e.target === this) {
+        this.style.display = "none";
+    }
+
+};
