@@ -283,3 +283,47 @@ modal.addEventListener("click", function (e) {
         modal.style.display = "none";
     }
 });
+
+const greetings = [
+"Welcome",
+"नमस्ते",
+"ನಮಸ್ಕಾರ",
+"வணக்கம்",
+"నమస్కారం",
+"സ്വാഗതം",
+"નમસ્તે",
+"স্বাগতম"
+];
+
+const welcome = document.getElementById("welcomeText");
+
+let i = 0;
+
+const slide = setInterval(() => {
+
+    i++;
+
+    if(i < greetings.length){
+
+        welcome.style.opacity = 0;
+
+        setTimeout(()=>{
+            welcome.innerHTML = greetings[i];
+            welcome.style.opacity = 1;
+        },300);
+
+    }
+
+},600);
+
+window.addEventListener("load",()=>{
+
+    setTimeout(()=>{
+
+        clearInterval(slide);
+
+        document.getElementById("splash").classList.add("fade-out");
+
+    },4500);
+
+});
