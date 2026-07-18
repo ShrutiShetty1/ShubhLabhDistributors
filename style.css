@@ -1895,5 +1895,9 @@ grid-template-columns:1fr;
     opacity:0;
     visibility:hidden;
 }
+    #welcomeText{
+    font-family: "Noto Sans", "Poppins", sans-serif;
+}
+
 
 
