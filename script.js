@@ -284,8 +284,7 @@ modal.addEventListener("click", function (e) {
     }
 });
 
-
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
     const greetings = [
         "Welcome",
@@ -301,24 +300,42 @@ document.addEventListener("DOMContentLoaded", function () {
     const welcome = document.getElementById("welcomeText");
     const splash = document.getElementById("splash");
 
-    let index = 0;
+    let i = 0;
 
-    const interval = setInterval(() => {
-        index++;
+    welcome.textContent = greetings[0];
 
-        if (index < greetings.length) {
-            welcome.textContent = greetings[index];
-        } else {
-            clearInterval(interval);
+    const changeText = setInterval(() => {
 
-            splash.style.opacity = "0";
+        i++;
+
+        if(i < greetings.length){
+
+            welcome.style.opacity = 0;
 
             setTimeout(() => {
-                splash.style.display = "none";
-            }, 800);
+                welcome.textContent = greetings[i];
+                welcome.style.opacity = 1;
+            },200);
+
+        }else{
+
+            clearInterval(changeText);
+
+            setTimeout(() => {
+
+                splash.style.opacity = "0";
+
+                setTimeout(()=>{
+                    splash.style.display="none";
+                },800);
+
+            },500);
+
         }
-    }, 500); // Change language every 0.5 second
+
+    },700);
 
 });
 
+    
         
