@@ -284,46 +284,41 @@ modal.addEventListener("click", function (e) {
     }
 });
 
-const greetings = [
-"Welcome",
-"नमस्ते",
-"ನಮಸ್ಕಾರ",
-"வணக்கம்",
-"నమస్కారం",
-"സ്വാഗതം",
-"નમસ્તે",
-"স্বাগতম"
-];
 
-const welcome = document.getElementById("welcomeText");
+document.addEventListener("DOMContentLoaded", function () {
 
-let i = 0;
+    const greetings = [
+        "Welcome",
+        "नमस्ते",
+        "ನಮಸ್ಕಾರ",
+        "வணக்கம்",
+        "నమస్కారం",
+        "സ്വാഗതം",
+        "স্বাগতম",
+        "નમસ્તે"
+    ];
 
-const slide = setInterval(() => {
+    const welcome = document.getElementById("welcomeText");
+    const splash = document.getElementById("splash");
 
-    i++;
+    let index = 0;
 
-    if(i < greetings.length){
+    const interval = setInterval(() => {
+        index++;
 
-        welcome.style.opacity = 0;
+        if (index < greetings.length) {
+            welcome.textContent = greetings[index];
+        } else {
+            clearInterval(interval);
 
-        setTimeout(()=>{
-            welcome.innerHTML = greetings[i];
-            welcome.style.opacity = 1;
-        },300);
+            splash.style.opacity = "0";
 
-    }
-
-},600);
-
-window.addEventListener("load",()=>{
-
-    setTimeout(()=>{
-
-        clearInterval(slide);
-
-        document.getElementById("splash").classList.add("fade-out");
-
-    },4500);
+            setTimeout(() => {
+                splash.style.display = "none";
+            }, 800);
+        }
+    }, 500); // Change language every 0.5 second
 
 });
+
+        
