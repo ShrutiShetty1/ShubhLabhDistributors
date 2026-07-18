@@ -419,11 +419,8 @@ HERO
     display:flex;
     align-items:flex-start;
 
-    /* Bright attractive image */
-    background:url("hero.jpg") center top / contain no-repeat;
-
-    /* Soft warm background around image */
-    background-color:#f5f1e8;
+    background: url("hero.jpg") center center / cover no-repeat;
+background-color: #000;
 
     padding-top:110px;
     overflow:hidden;
