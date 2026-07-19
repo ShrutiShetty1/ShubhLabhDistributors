@@ -269,35 +269,32 @@ background-color: #000;
 @media(max-width:768px){
 
 .hero{
-    min-height:90vh;
+    min-height:100vh;
     background-size:cover;
     background-position:center top;
     padding-top:90px;
 }
 
 .hero-content{
-    margin-top:120px;
+    margin-top:250px;   /* Move buttons lower */
     text-align:center;
 }
 
 .hero-buttons{
     display:flex;
-
     flex-direction:column;
-
     align-items:center;
-
-    gap:15px;
-
-    margin-top:30px;
+    gap:18px;
+    margin-top:40px;
 }
 
 .hero-buttons a{
-    width:260px;
+    width:280px;
     text-align:center;
 }
 
 }
+
 /*=========================================
 SECTION HEADINGS
 =========================================*/
