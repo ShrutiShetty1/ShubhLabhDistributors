@@ -338,5 +338,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+
+welcome.style.opacity = 0;
+welcome.style.transform = "translateY(10px)";
+
+setTimeout(() => {
+    welcome.textContent = greetings[i];
+    welcome.style.opacity = 1;
+    welcome.style.transform = "translateY(0)";
+}, 200);
+
+
+
     
         
