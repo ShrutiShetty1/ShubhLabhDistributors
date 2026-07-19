@@ -335,18 +335,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     },700);
-
-});
-
-
-welcome.style.opacity = 0;
-welcome.style.transform = "translateY(10px)";
+    
+    welcome.style.opacity = 0;
 
 setTimeout(() => {
     welcome.textContent = greetings[i];
     welcome.style.opacity = 1;
-    welcome.style.transform = "translateY(0)";
-}, 200);
+},200);
+
+});
+
+
+
 
 
 
