@@ -1625,8 +1625,49 @@ grid-template-columns:1fr;
 }
 
 .splash-logo{
-    width:130px;
-    margin-bottom:25px;
+    width:190px;
+    margin-bottom:35px;
+    animation: heartbeat 1.8s infinite;
+}
+
+@keyframes heartbeat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    14%{
+
+        transform:scale(1.12);
+
+    }
+
+    28%{
+
+        transform:scale(1);
+
+    }
+
+    42%{
+
+        transform:scale(1.12);
+
+    }
+
+    70%{
+
+        transform:scale(1);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
 }
 
 #welcomeText{
@@ -1635,7 +1676,7 @@ grid-template-columns:1fr;
     font-weight:700;
     color:#0B2D5C;
     min-height:70px;
-    transition:all .4s ease;
+    transition:opacity .35s ease, transform .35s ease;
 }
 
 #splash p{
