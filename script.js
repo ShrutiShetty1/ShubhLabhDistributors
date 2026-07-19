@@ -312,11 +312,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if(i < greetings.length){
 
             welcome.style.opacity = 0;
+welcome.style.transform = "translateY(10px)";
 
-            setTimeout(() => {
-                welcome.textContent = greetings[i];
-                welcome.style.opacity = 1;
-            },200);
+setTimeout(() => {
+    welcome.textContent = greetings[i];
+    welcome.style.opacity = 1;
+    welcome.style.transform = "translateY(0)";
+}, 200);
 
         }else{
 
@@ -337,11 +339,14 @@ document.addEventListener("DOMContentLoaded", () => {
     },700);
     
     welcome.style.opacity = 0;
+    welcome.style.transform = "translateY(10px)";
+    
 
 setTimeout(() => {
     welcome.textContent = greetings[i];
     welcome.style.opacity = 1;
-},200);
+    welcome.style.transform = "translateY(0)";
+}, 200);
 
 });
 
