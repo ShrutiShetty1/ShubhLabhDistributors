@@ -363,6 +363,52 @@ setTimeout(() => {
 
 });
 
+function startTruck() {
+
+    const truck = document.getElementById("truck");
+    const path = document.getElementById("indiaPath");
+
+    const length = path.getTotalLength();
+
+    let progress = 0;
+
+    function moveTruck() {
+
+        const point = path.getPointAtLength(progress);
+
+        truck.style.left = (point.x - 25) + "px";
+        truck.style.top = (point.y - 20) + "px";
+
+        progress += 3;
+
+        if(progress < length){
+
+            requestAnimationFrame(moveTruck);
+
+        }else{
+
+            const splash = document.getElementById("splash");
+
+            setTimeout(() => {
+
+                splash.style.opacity = "0";
+
+                setTimeout(() => {
+
+                    splash.style.display = "none";
+
+                },800);
+
+            },1000);
+
+        }
+
+    }
+
+    moveTruck();
+
+}
+
 
 
 
