@@ -1,90 +1,65 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHUBH LABH DISTRIBUTIONS</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="logo.png">
-<title>Shubh Labh Distributions</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-   
-   <!-- Splash Screen -->
-   <!--
+
+<!-- ==========================
+     SPLASH SCREEN
+========================== -->
 <div id="splash">
 
-    <img src="logo.png" alt="Shubh Labh Logo" class="splash-logo">
+    <div class="logo-container">
 
-    <h1 id="welcomeText">Welcome</h1>
-</div>-->
+        <img src="images/logo.png"
+             class="logo"
+             alt="Shubh Labh">
 
-<!-- ================= SPLASH SCREEN ================= -->
+        <h1>SHUBH LABH</h1>
 
-<div id="splash">
-
-    <!-- Stage 1 -->
-
-    <div id="welcomeStage">
-
-        <img src="logo.png"
-             alt="Shubh Labh Logo"
-             class="splash-logo">
-
-        <h1 id="welcomeText">Welcome</h1>
-
-    </div>
-
-    <!-- Stage 2 -->
-
-    <div id="indiaStage">
-
-        <h2 class="india-title">
-            Delivering Trust Across India
-        </h2>
-
-<div class="india-map">
-
-    <img src="india-map.svg"
-         id="indiaSvg"
-         alt="India Map">
-
-    <svg id="routeSvg" viewBox="0 0 600 700">
-
-        <path id="routePath"
-        d="M165 600
-           C210 520 250 430 290 350
-           S360 200 430 110"
-        />
-
-    </svg>
-
-    <div id="truck">
-
-        <img src="truck.png" alt="Truck">
+        <p>Delivering Trust Across India</p>
 
     </div>
 
 </div>
-        
 
-        <p class="india-tagline">
+<!-- ==========================
+     MAP INTRO
+========================== -->
 
-            Connecting Every Corner of India
+<section id="mapIntro">
 
-        </p>
+    <!-- SVG goes here in Part 2 -->
+    <div class="map-wrapper">
+
+        <svg id="indiaMap"
+             viewBox="0 0 800 900">
+
+            <!-- Replace this path with India SVG path in Part 3 -->
+
+            <path id="indiaPath"
+                  d=""
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="4"/>
+
+        </svg>
+
+        <!-- Truck -->
+        <img src="images/truck.png"
+             id="truck"
+             alt="Truck">
 
     </div>
 
-</div>
+
 <!-- ================= HEADER ================= -->
 
 <header id="header">
