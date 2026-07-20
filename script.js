@@ -284,7 +284,281 @@ if (modal && modalImg && closeBtn) {
     });
 
 }
+// =================================
+// WELCOME + MAP + TRUCK ANIMATION
+// =================================
 
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+
+const greetings=[
+
+"Welcome",
+
+"नमस्ते",
+
+"ನಮಸ್ಕಾರ",
+
+"வணக்கம்",
+
+"నమస్కారం",
+
+"സ്വാഗതം",
+
+"স্বাগতম",
+
+"નમસ્તે"
+
+];
+
+
+const welcome=document.getElementById("welcomeText");
+
+const splash=document.getElementById("splash");
+
+const homepage=document.getElementById("homepage");
+
+const route=document.getElementById("routePath");
+
+const truck=document.getElementById("truckGroup");
+
+
+let i=0;
+
+
+
+function showGreeting(){
+
+
+if(i < greetings.length){
+
+
+welcome.style.opacity=0;
+
+
+setTimeout(()=>{
+
+
+welcome.innerHTML=greetings[i];
+
+welcome.style.opacity=1;
+
+
+i++;
+
+
+},300);
+
+
+
+}
+
+else{
+
+
+startMap();
+
+
+}
+
+
+}
+
+
+
+let interval=setInterval(()=>{
+
+
+showGreeting();
+
+
+if(i>greetings.length){
+
+clearInterval(interval);
+
+}
+
+
+},700);
+
+
+
+
+
+function startMap(){
+
+
+
+// draw route
+
+
+let length=route.getTotalLength();
+
+
+route.style.strokeDasharray=length;
+
+route.style.strokeDashoffset=length;
+
+
+
+route.animate(
+
+[
+
+{
+
+strokeDashoffset:length
+
+},
+
+{
+
+strokeDashoffset:0
+
+}
+
+],
+
+{
+
+duration:5000,
+
+fill:"forwards"
+
+}
+
+);
+
+
+
+
+
+moveTruck();
+
+
+
+}
+
+
+
+
+
+function moveTruck(){
+
+
+let length=route.getTotalLength();
+
+
+let start=null;
+
+
+truck.style.opacity=1;
+
+
+
+function animate(time){
+
+
+if(!start)
+
+start=time;
+
+
+
+let progress=(time-start)/5000;
+
+
+
+if(progress>1)
+
+progress=1;
+
+
+
+let point=route.getPointAtLength(
+
+length*progress
+
+);
+
+
+
+let next=route.getPointAtLength(
+
+Math.min(length,length*progress+5)
+
+);
+
+
+
+let angle=Math.atan2(
+
+next.y-point.y,
+
+next.x-point.x
+
+)*180/Math.PI;
+
+
+
+truck.setAttribute(
+
+"transform",
+
+`translate(${point.x},${point.y}) rotate(${angle})`
+
+);
+
+
+
+if(progress<1)
+
+requestAnimationFrame(animate);
+
+
+
+}
+
+
+
+requestAnimationFrame(animate);
+
+
+
+
+
+setTimeout(()=>{
+
+
+splash.style.opacity=0;
+
+
+setTimeout(()=>{
+
+
+splash.style.display="none";
+
+
+homepage.style.opacity=1;
+
+
+
+},1000);
+
+
+
+},5500);
+
+
+
+}
+
+
+
+});
+
+/*
 // =========================================
 // MULTI LANGUAGE WELCOME + MAP INTRO
 // =========================================
