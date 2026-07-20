@@ -989,7 +989,7 @@ BACK TO TOP BUTTON
 /*=========================================
 SCROLL ANIMATION
 =========================================*/
-
+/*
 section{
     opacity:0;
     transform:translateY(40px);
@@ -999,6 +999,10 @@ section{
 section.show{
     opacity:1;
     transform:translateY(0);
+}*/
+section{
+    opacity:1;
+    transform:none;
 }
 
 /*=========================================
@@ -1692,14 +1696,26 @@ grid-template-columns:1fr;
 /* ==========================================
    PAGE BANNER
 ========================================== */
-
+/*
 .page-banner{
     background:linear-gradient(135deg,#111,#1b1b1b);
     color:#fff;
-    padding:130px 0 70px;
+    padding:100px 0;
     text-align:center;
 }
+*/
+.page-banner{
+    background:linear-gradient(135deg,#111,#1b1b1b);
+    color:#fff;
+    text-align:center;
 
+    padding:130px 0 70px;
+
+    margin:0;
+}
+.page-banner + section{
+    padding-top:70px;
+}
 .page-banner span{
     color:#D4AF37;
     font-size:14px;
