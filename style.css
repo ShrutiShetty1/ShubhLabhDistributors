@@ -146,19 +146,19 @@ header.scrolled .menu-toggle{
 /*=========================
 HERO
 =========================*/
-
 .hero{
     min-height:100vh;
-    position:relative;
-    display:flex;
-    align-items:flex-start;
-z-index:0;
-    background: url("hero1.jpg") center center / cover no-repeat;
-background-color: #000;
+    height:auto;
+    padding-top:120px;     /* prevents header overlap */
+    padding-bottom:60px;
 
-    padding-top:110px;
-    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:url("images/hero1.jpg") center center/cover no-repeat;
 }
+
 
 /* Very light overlay only for readability */
 .hero::before{
@@ -187,7 +187,7 @@ background-color: #000;
     text-align:center;
 
     /* Move content down */
-    margin-top:240px;
+    /*margin-top:240px;*/
 }
 
 .hero-tagline{
