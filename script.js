@@ -285,6 +285,17 @@ if (modal && modalImg && closeBtn) {
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    const splash = document.getElementById("splash");
+    const welcome = document.getElementById("welcomeText");
+
+    // Show splash only once per browser tab
+    if (sessionStorage.getItem("splashShown")) {
+        splash.style.display = "none";
+        return;
+    }
+
+    sessionStorage.setItem("splashShown", "true");
+
     const greetings = [
         "Welcome",
         "नमस्ते",
@@ -296,29 +307,25 @@ document.addEventListener("DOMContentLoaded", () => {
         "નમસ્તે"
     ];
 
-    const welcome = document.getElementById("welcomeText");
-    const splash = document.getElementById("splash");
-
     let i = 0;
-
     welcome.textContent = greetings[0];
 
     const changeText = setInterval(() => {
 
         i++;
 
-        if(i < greetings.length){
+        if (i < greetings.length) {
 
-            welcome.style.opacity = 0;
-welcome.style.transform = "translateY(10px)";
+            welcome.style.opacity = "0";
+            welcome.style.transform = "translateY(10px)";
 
-setTimeout(() => {
-    welcome.textContent = greetings[i];
-    welcome.style.opacity = 1;
-    welcome.style.transform = "translateY(0)";
-}, 200);
+            setTimeout(() => {
+                welcome.textContent = greetings[i];
+                welcome.style.opacity = "1";
+                welcome.style.transform = "translateY(0)";
+            }, 200);
 
-        }else{
+        } else {
 
             clearInterval(changeText);
 
@@ -326,25 +333,15 @@ setTimeout(() => {
 
                 splash.style.opacity = "0";
 
-                setTimeout(()=>{
-                    splash.style.display="none";
-                },800);
+                setTimeout(() => {
+                    splash.style.display = "none";
+                }, 800);
 
-            },500);
+            }, 500);
 
         }
 
-    },700);
-    
-    welcome.style.opacity = 0;
-    welcome.style.transform = "translateY(10px)";
-    
-
-setTimeout(() => {
-    welcome.textContent = greetings[i];
-    welcome.style.opacity = 1;
-    welcome.style.transform = "translateY(0)";
-}, 200);
+    }, 700);
 
 });
 
