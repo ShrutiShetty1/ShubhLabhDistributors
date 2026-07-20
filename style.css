@@ -1678,7 +1678,12 @@ grid-template-columns:1fr;
     font-size:56px;
     font-weight:700;
     color:#0B2D5C;
-    min-height:70px;
+
+    width:100%;
+    text-align:center;
+
+    min-height:80px;
+
     transition:opacity .35s ease, transform .35s ease;
 }
 
