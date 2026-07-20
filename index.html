@@ -39,21 +39,27 @@
     <!-- SVG goes here in Part 2 -->
     <div class="map-wrapper">
 
-        <svg id="indiaMap"
-             viewBox="0 0 800 900">
+        <svg id="indiaMap" viewBox="0 0 800 900">
 
-            <!-- Replace this path with India SVG path in Part 3 -->
+    <!-- India outline -->
+    <path id="indiaPath"
+          d=""
+          fill="none"
+          stroke="#e5e5e5"
+          stroke-width="3"/>
 
-            <path id="indiaPath"
-                  d=""
-                  fill="none"
-                  stroke="#000"
-                  stroke-width="4"/>
 
-        </svg>
+    <!-- Delivery route -->
+    <path id="routePath"
+          d=""
+          fill="none"
+          stroke="#D4AF37"
+          stroke-width="6"
+          stroke-linecap="round"/>
 
+</svg>
         <!-- Truck -->
-        <img src="images/truck.png"
+        <img src="truck.png"
              id="truck"
              alt="Truck">
 
