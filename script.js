@@ -284,6 +284,7 @@ if (modal && modalImg && closeBtn) {
     });
 
 }
+/*
 // =================================
 // WELCOME + MAP + TRUCK ANIMATION
 // =================================
@@ -770,9 +771,9 @@ homepage.style.transition="opacity 1s ease";
 
 
 
-});
+});*/
 
-/* document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
     const greetings = [
         "Welcome",
