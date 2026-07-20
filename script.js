@@ -285,7 +285,220 @@ if (modal && modalImg && closeBtn) {
 
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+// =========================================
+// MULTI LANGUAGE WELCOME + MAP INTRO
+// =========================================
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+
+const greetings=[
+
+"Welcome",
+"नमस्ते",
+"ನಮಸ್ಕಾರ",
+"வணக்கம்",
+"నమస్కారం",
+"സ്വാഗതം",
+"স্বাগতম",
+"નમસ્તે"
+
+];
+
+
+const welcome=document.getElementById("welcomeText");
+
+const splash=document.getElementById("splash");
+
+const homepage=document.getElementById("homepage");
+
+const route=document.getElementById("routePath");
+
+const truck=document.getElementById("truck");
+
+
+if(homepage){
+
+homepage.style.opacity="0";
+
+}
+
+
+let index=0;
+
+
+function changeGreeting(){
+
+
+if(index < greetings.length){
+
+
+welcome.style.opacity="0";
+
+
+setTimeout(()=>{
+
+
+welcome.innerHTML=greetings[index];
+
+welcome.style.opacity="1";
+
+
+index++;
+
+
+},300);
+
+
+}
+
+else{
+
+
+startMapAnimation();
+
+
+}
+
+}
+
+
+let greetingInterval=setInterval(()=>{
+
+
+changeGreeting();
+
+
+if(index>greetings.length){
+
+clearInterval(greetingInterval);
+
+}
+
+
+},700);
+
+
+
+
+
+function startMapAnimation(){
+
+
+
+// show map
+
+document.getElementById("mapIntro").style.display="block";
+
+
+
+// route drawing
+
+if(route){
+
+
+let length=route.getTotalLength();
+
+
+route.style.strokeDasharray=length;
+
+route.style.strokeDashoffset=length;
+
+
+route.animate(
+
+[
+
+{strokeDashoffset:length},
+
+{strokeDashoffset:0}
+
+],
+
+{
+
+duration:5000,
+
+fill:"forwards"
+
+}
+
+);
+
+
+}
+
+
+
+// truck movement
+
+if(truck){
+
+
+truck.animate(
+
+[
+
+{
+transform:"translate(0,0)"
+},
+
+{
+transform:"translate(350px,-300px)"
+}
+
+],
+
+{
+
+duration:5000,
+
+easing:"ease-in-out",
+
+fill:"forwards"
+
+}
+
+);
+
+
+}
+
+
+
+setTimeout(()=>{
+
+
+splash.style.opacity="0";
+
+
+setTimeout(()=>{
+
+
+splash.style.display="none";
+
+
+homepage.style.opacity="1";
+
+
+homepage.style.transition="opacity 1s ease";
+
+
+},800);
+
+
+
+},5500);
+
+
+
+}
+
+
+
+});
+
+/* document.addEventListener("DOMContentLoaded", () => {
 
     const greetings = [
         "Welcome",
@@ -392,7 +605,7 @@ function startTruck() {
 
     }, 5200);
 
-}
+}*/
         
 
 
