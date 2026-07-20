@@ -328,7 +328,7 @@ setTimeout(() => {
 
         const welcomeStage = document.getElementById("welcomeStage");
         const indiaStage = document.getElementById("indiaStage");
-        const indiaPath = document.getElementById("indiaPath");
+        
 
         welcomeStage.style.opacity = "0";
 
@@ -338,8 +338,7 @@ setTimeout(() => {
 
             indiaStage.classList.add("show");
 
-            indiaPath.style.animation =
-                "drawIndia 2.5s linear forwards";
+            
 
             startTruck();
 
@@ -366,49 +365,35 @@ setTimeout(() => {
 function startTruck() {
 
     const truck = document.getElementById("truck");
-    const path = document.getElementById("indiaPath");
 
-    const length = path.getTotalLength();
-
-    let progress = 0;
-
-    function moveTruck() {
-
-        const point = path.getPointAtLength(progress);
-
-        truck.style.left = (point.x - 25) + "px";
-        truck.style.top = (point.y - 20) + "px";
-
-        progress += 3;
-
-        if(progress < length){
-
-            requestAnimationFrame(moveTruck);
-
-        }else{
-
-            const splash = document.getElementById("splash");
-
-            setTimeout(() => {
-
-                splash.style.opacity = "0";
-
-                setTimeout(() => {
-
-                    splash.style.display = "none";
-
-                },800);
-
-            },1000);
-
+    truck.animate(
+        [
+            { transform: "translate(40px,420px)" },
+            { transform: "translate(320px,40px)" }
+        ],
+        {
+            duration: 4200,
+            easing: "ease-in-out",
+            fill: "forwards"
         }
+    );
 
-    }
+    setTimeout(() => {
 
-    moveTruck();
+        const splash = document.getElementById("splash");
+
+        splash.style.opacity = "0";
+
+        setTimeout(() => {
+
+            splash.style.display = "none";
+
+        }, 800);
+
+    }, 5200);
 
 }
-
+        
 
 
 
