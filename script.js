@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if(i < greetings.length){
 
             welcome.style.opacity = 0;
-welcome.style.transform = "translateY(10px)";
+welcome.style.transform = "translateY(8px)";
 
 setTimeout(() => {
     welcome.textContent = greetings[i];
@@ -352,7 +352,7 @@ setTimeout(() => {
     },700);
     
     welcome.style.opacity = 0;
-    welcome.style.transform = "translateY(10px)";
+    welcome.style.transform = "translateY(8px)";
     
 
 setTimeout(() => {
