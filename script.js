@@ -1,3 +1,4 @@
+
 // =========================================
 // SHUBH LABH DISTRIBUTIONS
 // Premium Website Script
@@ -180,13 +181,10 @@ if (menuToggle && mobileNav) {
 
 })();
 
-
-
 document.getElementById("contact-form")
 ?.addEventListener("submit", function(event){
 
     event.preventDefault();
-
 
     emailjs.sendForm(
         "service_tgvz9ub",
@@ -284,494 +282,6 @@ if (modal && modalImg && closeBtn) {
     });
 
 }
-/*
-// =================================
-// WELCOME + MAP + TRUCK ANIMATION
-// =================================
-
-
-document.addEventListener("DOMContentLoaded",()=>{
-
-
-const greetings=[
-
-"Welcome",
-
-"नमस्ते",
-
-"ನಮಸ್ಕಾರ",
-
-"வணக்கம்",
-
-"నమస్కారం",
-
-"സ്വാഗതം",
-
-"স্বাগতম",
-
-"નમસ્તે"
-
-];
-
-
-const welcome=document.getElementById("welcomeText");
-
-const splash=document.getElementById("splash");
-
-const homepage=document.getElementById("homepage");
-
-const route=document.getElementById("routePath");
-
-const truck=document.getElementById("truckGroup");
-
-
-let i=0;
-
-
-
-function showGreeting(){
-
-
-if(i < greetings.length){
-
-
-welcome.style.opacity=0;
-
-
-setTimeout(()=>{
-
-
-welcome.innerHTML=greetings[i];
-
-welcome.style.opacity=1;
-
-
-i++;
-
-
-},300);
-
-
-
-}
-
-else{
-
-
-startMap();
-
-
-}
-
-
-}
-
-
-
-let interval=setInterval(()=>{
-
-
-showGreeting();
-
-
-if(i>greetings.length){
-
-clearInterval(interval);
-
-}
-
-
-},700);
-
-
-
-
-
-function startMap(){
-
-
-
-// draw route
-
-
-let length=route.getTotalLength();
-
-
-route.style.strokeDasharray=length;
-
-route.style.strokeDashoffset=length;
-
-
-
-route.animate(
-
-[
-
-{
-
-strokeDashoffset:length
-
-},
-
-{
-
-strokeDashoffset:0
-
-}
-
-],
-
-{
-
-duration:5000,
-
-fill:"forwards"
-
-}
-
-);
-
-
-
-
-
-moveTruck();
-
-
-
-}
-
-
-
-
-
-function moveTruck(){
-
-
-let length=route.getTotalLength();
-
-
-let start=null;
-
-
-truck.style.opacity=1;
-
-
-
-function animate(time){
-
-
-if(!start)
-
-start=time;
-
-
-
-let progress=(time-start)/5000;
-
-
-
-if(progress>1)
-
-progress=1;
-
-
-
-let point=route.getPointAtLength(
-
-length*progress
-
-);
-
-
-
-let next=route.getPointAtLength(
-
-Math.min(length,length*progress+5)
-
-);
-
-
-
-let angle=Math.atan2(
-
-next.y-point.y,
-
-next.x-point.x
-
-)*180/Math.PI;
-
-
-
-truck.setAttribute(
-
-"transform",
-
-`translate(${point.x},${point.y}) rotate(${angle})`
-
-);
-
-
-
-if(progress<1)
-
-requestAnimationFrame(animate);
-
-
-
-}
-
-
-
-requestAnimationFrame(animate);
-
-
-
-
-
-setTimeout(()=>{
-
-
-splash.style.opacity=0;
-
-
-setTimeout(()=>{
-
-
-splash.style.display="none";
-
-
-homepage.style.opacity=1;
-
-
-
-},1000);
-
-
-
-},5500);
-
-
-
-}
-
-
-
-});
-
-/*
-// =========================================
-// MULTI LANGUAGE WELCOME + MAP INTRO
-// =========================================
-
-document.addEventListener("DOMContentLoaded",()=>{
-
-
-const greetings=[
-
-"Welcome",
-"नमस्ते",
-"ನಮಸ್ಕಾರ",
-"வணக்கம்",
-"నమస్కారం",
-"സ്വാഗതം",
-"স্বাগতম",
-"નમસ્તે"
-
-];
-
-
-const welcome=document.getElementById("welcomeText");
-
-const splash=document.getElementById("splash");
-
-const homepage=document.getElementById("homepage");
-
-const route=document.getElementById("routePath");
-
-const truck=document.getElementById("truck");
-
-
-if(homepage){
-
-homepage.style.opacity="0";
-
-}
-
-
-let index=0;
-
-
-function changeGreeting(){
-
-
-if(index < greetings.length){
-
-
-welcome.style.opacity="0";
-
-
-setTimeout(()=>{
-
-
-welcome.innerHTML=greetings[index];
-
-welcome.style.opacity="1";
-
-
-index++;
-
-
-},300);
-
-
-}
-
-else{
-
-
-startMapAnimation();
-
-
-}
-
-}
-
-
-let greetingInterval=setInterval(()=>{
-
-
-changeGreeting();
-
-
-if(index>greetings.length){
-
-clearInterval(greetingInterval);
-
-}
-
-
-},700);
-
-
-
-
-
-function startMapAnimation(){
-
-
-
-// show map
-
-document.getElementById("mapIntro").style.display="block";
-
-
-
-// route drawing
-
-if(route){
-
-
-let length=route.getTotalLength();
-
-
-route.style.strokeDasharray=length;
-
-route.style.strokeDashoffset=length;
-
-
-route.animate(
-
-[
-
-{strokeDashoffset:length},
-
-{strokeDashoffset:0}
-
-],
-
-{
-
-duration:5000,
-
-fill:"forwards"
-
-}
-
-);
-
-
-}
-
-
-
-// truck movement
-
-if(truck){
-
-
-truck.animate(
-
-[
-
-{
-transform:"translate(0,0)"
-},
-
-{
-transform:"translate(350px,-300px)"
-}
-
-],
-
-{
-
-duration:5000,
-
-easing:"ease-in-out",
-
-fill:"forwards"
-
-}
-
-);
-
-
-}
-
-
-
-setTimeout(()=>{
-
-
-splash.style.opacity="0";
-
-
-setTimeout(()=>{
-
-
-splash.style.display="none";
-
-
-homepage.style.opacity="1";
-
-
-homepage.style.transition="opacity 1s ease";
-
-
-},800);
-
-
-
-},5500);
-
-
-
-}
-
-
-
-});*/
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -800,7 +310,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if(i < greetings.length){
 
             welcome.style.opacity = 0;
-welcome.style.transform = "translateY(8px)";
+welcome.style.transform = "translateY(10px)";
 
 setTimeout(() => {
     welcome.textContent = greetings[i];
@@ -810,36 +320,24 @@ setTimeout(() => {
 
         }else{
 
-    clearInterval(changeText);
+            clearInterval(changeText);
 
-    setTimeout(() => {
+            setTimeout(() => {
 
-        const welcomeStage = document.getElementById("welcomeStage");
-        const indiaStage = document.getElementById("indiaStage");
-        
+                splash.style.opacity = "0";
 
-        welcomeStage.style.opacity = "0";
+                setTimeout(()=>{
+                    splash.style.display="none";
+                },800);
 
-        setTimeout(() => {
+            },500);
 
-            welcomeStage.style.display = "none";
-
-            indiaStage.classList.add("show");
-
-            
-
-            startTruck();
-
-        },600);
-
-    },500);
-
-}
+        }
 
     },700);
     
     welcome.style.opacity = 0;
-    welcome.style.transform = "translateY(8px)";
+    welcome.style.transform = "translateY(10px)";
     
 
 setTimeout(() => {
@@ -849,43 +347,6 @@ setTimeout(() => {
 }, 200);
 
 });
-
-function startTruck() {
-
-    const truck = document.getElementById("truck");
-
-    truck.animate(
-        [
-            { transform: "translate(40px,420px)" },
-            { transform: "translate(320px,40px)" }
-        ],
-        {
-            duration: 4200,
-            easing: "ease-in-out",
-            fill: "forwards"
-        }
-    );
-
-    setTimeout(() => {
-
-        const splash = document.getElementById("splash");
-
-        splash.style.opacity = "0";
-
-        setTimeout(() => {
-
-            splash.style.display = "none";
-
-        }, 800);
-
-    }, 5200);
-
-}*/
-        
-
-
-
-
 
     
         
