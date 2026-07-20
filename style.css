@@ -148,15 +148,18 @@ HERO
 =========================*/
 .hero{
     min-height:100vh;
-    height:auto;
-    padding-top:120px;     /* prevents header overlap */
-    padding-bottom:60px;
-
     display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:url("images/hero1.jpg") center center/cover no-repeat;
+    align-items:flex-end;
+    background:
+        linear-gradient(
+            rgba(0,0,0,.08),
+            rgba(0,0,0,.12)
+        ),
+        url("hero1.jpg");
+    background-size:cover;
+    background-position:center top;
+    background-repeat:no-repeat;
+    padding:0 0 70px;
 }
 
 
@@ -187,7 +190,7 @@ HERO
     text-align:center;
 
     /* Move content down */
-    /*margin-top:240px;*/
+    margin-top:240px;
 }
 
 .hero-tagline{
