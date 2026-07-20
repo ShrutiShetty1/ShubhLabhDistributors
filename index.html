@@ -1,116 +1,92 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHUBH LABH DISTRIBUTIONS</title>
 
-    <link rel="stylesheet" href="style.css">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="logo.png">
+<title>Shubh Labh Distributions</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <body>
+   
+   <!-- Splash Screen -->
+   <!--
+<div id="splash">
 
-<!-- ==========================
-     SPLASH SCREEN
-========================== -->
+    <img src="logo.png" alt="Shubh Labh Logo" class="splash-logo">
+
+    <h1 id="welcomeText">Welcome</h1>
+</div>-->
+
+<!-- ================= SPLASH SCREEN ================= -->
 
 <div id="splash">
 
-    <div class="logo-container">
+    <!-- Stage 1 -->
+
+    <div id="welcomeStage">
 
         <img src="logo.png"
-             class="logo"
-             alt="Shubh Labh">
+             alt="Shubh Labh Logo"
+             class="splash-logo">
 
-        <p>Delivering Trust Across India</p>
+        <h1 id="welcomeText">Welcome</h1>
 
-        <h2 id="welcomeText"></h2>
+    </div>
+
+    <!-- Stage 2 -->
+
+    <div id="indiaStage">
+
+        <h2 class="india-title">
+            Delivering Trust Across India
+        </h2>
+
+<div class="india-map">
+
+    <img src="india-map.svg"
+         id="indiaSvg"
+         alt="India Map">
+
+    <svg id="routeSvg" viewBox="0 0 600 700">
+
+        <path id="routePath"
+        d="M165 600
+           C210 520 250 430 290 350
+           S360 200 430 110"
+        />
+
+    </svg>
+
+    <div id="truck">
+
+        <img src="truck.png" alt="Truck">
 
     </div>
 
 </div>
+        
 
-<!--
+        <p class="india-tagline">
 
-<!-- ==========================
-     INDIA MAP INTRO
-========================== -->
-<!--
-<section id="mapIntro">
+            Connecting Every Corner of India
 
-<div class="map-wrapper">
+        </p>
 
-
-<svg id="indiaMap"
-     viewBox="0 0 800 900">
-
-
-<!-- INDIA MAP -->
-<!--
-<path id="indiaPath"
-
-d="M400 120 
-C520 160 620 250 650 370
-C680 520 560 700 430 760
-C300 800 170 700 150 560
-C120 420 200 250 400 120"
-
-fill="none"
-
-stroke="#e6e6e6"
-
-stroke-width="8"/>
-
-
-
-<!-- DELIVERY ROUTE -->
-<!--
-<path id="routePath"
-
-d="M160 700
-C260 620 300 520 380 450
-C470 360 520 240 650 150"
-
-fill="none"
-
-stroke="#D4AF37"
-
-stroke-width="8"
-
-stroke-linecap="round"/>
-
-
-
-<!-- TRUCK -->
-<!--
-<g id="truckGroup">
-
-<image
-
-href="truck.png"
-
-width="90"
-
-height="55"
-
-x="-45"
-
-y="-27"/>
-
-</g>
-
-
-</svg>
-
+    </div>
 
 </div>
-
-</section>
--->
-
 <!-- ================= HEADER ================= -->
-<div id="homepage">
+
 <header id="header">
 
 <div class="container">
@@ -1110,7 +1086,6 @@ Become a Brand Promoter
 <i class="fas fa-arrow-up"></i>
 
 </button>
-</div> <!-- homepage -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="script.js"></script>
 
