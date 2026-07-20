@@ -14,11 +14,15 @@
 <!-- ==========================
      SPLASH SCREEN
 ========================== -->
+<!-- ==========================
+     SPLASH SCREEN
+========================== -->
+
 <div id="splash">
 
     <div class="logo-container">
 
-        <img src="logo.png"
+        <img src="images/logo.png"
              class="logo"
              alt="Shubh Labh">
 
@@ -32,41 +36,82 @@
 
 </div>
 
+
+
 <!-- ==========================
-     MAP INTRO
+     INDIA MAP INTRO
 ========================== -->
 
 <section id="mapIntro">
 
-    <!-- SVG goes here in Part 2 -->
-    <div class="map-wrapper">
-
-        <svg id="indiaMap" viewBox="0 0 800 900">
-
-    <!-- India outline -->
-    <path id="indiaPath"
-          d=""
-          fill="none"
-          stroke="#e5e5e5"
-          stroke-width="3"/>
+<div class="map-wrapper">
 
 
-    <!-- Delivery route -->
-    <path id="routePath"
-          d=""
-          fill="none"
-          stroke="#D4AF37"
-          stroke-width="6"
-          stroke-linecap="round"/>
+<svg id="indiaMap"
+     viewBox="0 0 800 900">
+
+
+<!-- INDIA MAP -->
+
+<path id="indiaPath"
+
+d="M400 120 
+C520 160 620 250 650 370
+C680 520 560 700 430 760
+C300 800 170 700 150 560
+C120 420 200 250 400 120"
+
+fill="none"
+
+stroke="#e6e6e6"
+
+stroke-width="8"/>
+
+
+
+<!-- DELIVERY ROUTE -->
+
+<path id="routePath"
+
+d="M160 700
+C260 620 300 520 380 450
+C470 360 520 240 650 150"
+
+fill="none"
+
+stroke="#D4AF37"
+
+stroke-width="8"
+
+stroke-linecap="round"/>
+
+
+
+<!-- TRUCK -->
+
+<g id="truckGroup">
+
+<image
+
+href="truck.png"
+
+width="90"
+
+height="55"
+
+x="-45"
+
+y="-27"/>
+
+</g>
+
 
 </svg>
-        <!-- Truck -->
-        <img src="truck.png"
-             id="truck"
-             alt="Truck">
 
-    </div>
-    </section>
+
+</div>
+
+</section>
 
 
 <!-- ================= HEADER ================= -->
