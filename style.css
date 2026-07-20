@@ -1967,7 +1967,7 @@ font-size:26px;
 ========================================== */
 
 #homepage{
-    opacity:0;
+    opacity:1;
     visibility:hidden;
     transition:1s;
 }
