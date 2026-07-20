@@ -1853,3 +1853,193 @@ font-size:26px;
 }
 
 }
+
+/* ==========================================
+   SPLASH SCREEN
+========================================== */
+
+#splash{
+    position:fixed;
+    inset:0;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    transition:opacity .8s ease, visibility .8s ease;
+}
+
+#splash.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.logo-container{
+    text-align:center;
+    animation:fadeLogo 1.5s ease;
+}
+
+.logo-container .logo{
+    width:170px;
+    margin:auto;
+    margin-bottom:25px;
+}
+
+.logo-container h1{
+    color:#0B2D5C;
+    font-size:48px;
+    letter-spacing:3px;
+    margin-bottom:10px;
+}
+
+.logo-container p{
+    color:#D4AF37;
+    font-size:22px;
+    font-weight:600;
+}
+
+/* ==========================================
+   MAP INTRO
+========================================== */
+
+#mapIntro{
+    position:fixed;
+    inset:0;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    visibility:hidden;
+    z-index:99998;
+    transition:1s;
+}
+
+#mapIntro.show{
+    opacity:1;
+    visibility:visible;
+}
+
+.map-wrapper{
+    position:relative;
+    width:85vw;
+    max-width:900px;
+}
+
+#indiaMap{
+    width:100%;
+    height:auto;
+}
+
+#indiaPath{
+    fill:none;
+    stroke:#000;
+    stroke-width:3;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+/* Truck */
+
+#truck{
+    position:absolute;
+    width:90px;
+    left:0;
+    top:0;
+    transform:translate(-50%,-50%);
+    z-index:5;
+}
+
+/* Distribution Points */
+
+.city{
+    position:absolute;
+    width:10px;
+    height:10px;
+    background:#D4AF37;
+    border-radius:50%;
+    opacity:0;
+    animation:pulse 1.5s infinite;
+}
+
+/* ==========================================
+   HOME PAGE
+========================================== */
+
+#homepage{
+    opacity:0;
+    visibility:hidden;
+    transition:1s;
+}
+
+#homepage.show{
+    opacity:1;
+    visibility:visible;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes fadeLogo{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(.8);
+        opacity:.6;
+    }
+
+    50%{
+        transform:scale(1.5);
+        opacity:1;
+    }
+
+    100%{
+        transform:scale(.8);
+        opacity:.6;
+    }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.logo-container .logo{
+    width:110px;
+}
+
+.logo-container h1{
+    font-size:30px;
+}
+
+.logo-container p{
+    font-size:16px;
+}
+
+#truck{
+    width:60px;
+}
+
+.map-wrapper{
+    width:95vw;
+}
+
+}
+
+
