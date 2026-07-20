@@ -322,19 +322,32 @@ setTimeout(() => {
 
         }else{
 
-            clearInterval(changeText);
+    clearInterval(changeText);
 
-            setTimeout(() => {
+    setTimeout(() => {
 
-                splash.style.opacity = "0";
+        const welcomeStage = document.getElementById("welcomeStage");
+        const indiaStage = document.getElementById("indiaStage");
+        const indiaPath = document.getElementById("indiaPath");
 
-                setTimeout(()=>{
-                    splash.style.display="none";
-                },800);
+        welcomeStage.style.opacity = "0";
 
-            },500);
+        setTimeout(() => {
 
-        }
+            welcomeStage.style.display = "none";
+
+            indiaStage.classList.add("show");
+
+            indiaPath.style.animation =
+                "drawIndia 2.5s linear forwards";
+
+            startTruck();
+
+        },600);
+
+    },500);
+
+}
 
     },700);
     
